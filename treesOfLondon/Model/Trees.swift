@@ -53,6 +53,7 @@ class Trees: NSObject, MKAnnotation {
         return locationName
     }
     
+    
     var markerTintColor: UIColor  {
         switch discipline {
         case "Alder":
@@ -108,3 +109,4 @@ class Trees: NSObject, MKAnnotation {
     
     
 }
+

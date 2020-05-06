@@ -18,6 +18,7 @@
 		C98524A22445B8450047BF66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C98524A12445B8450047BF66 /* Assets.xcassets */; };
 		C98524A52445B8450047BF66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98524A32445B8450047BF66 /* LaunchScreen.storyboard */; };
 		C98524AF2445CC450047BF66 /* Trees.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98524AE2445CC450047BF66 /* Trees.swift */; };
+		C98FFF092463285800C9B6F7 /* ClusterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98FFF082463285800C9B6F7 /* ClusterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		C98524A42445B8450047BF66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C98524A62445B8450047BF66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C98524AE2445CC450047BF66 /* Trees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trees.swift; sourceTree = "<group>"; };
+		C98FFF082463285800C9B6F7 /* ClusterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				C97F95A5245B31C900932DDE /* TreeMarkerView.swift */,
+				C98FFF082463285800C9B6F7 /* ClusterView.swift */,
 				C98524A32445B8450047BF66 /* LaunchScreen.storyboard */,
 				C985249C2445B8440047BF66 /* ViewController.swift */,
 				C985249E2445B8440047BF66 /* Main.storyboard */,
@@ -191,6 +194,7 @@
 				C985249D2445B8440047BF66 /* ViewController.swift in Sources */,
 				C98524AF2445CC450047BF66 /* Trees.swift in Sources */,
 				C97F95A6245B31C900932DDE /* TreeMarkerView.swift in Sources */,
+				C98FFF092463285800C9B6F7 /* ClusterView.swift in Sources */,
 				C98524992445B8440047BF66 /* AppDelegate.swift in Sources */,
 				C985249B2445B8440047BF66 /* SceneDelegate.swift in Sources */,
 			);

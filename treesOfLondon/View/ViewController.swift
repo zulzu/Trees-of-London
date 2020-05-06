@@ -11,7 +11,8 @@ import MapKit
 import CoreLocation
 
 
-class ViewController: UIViewController {
+
+class ViewController: UIViewController, MKMapViewDelegate {
 
     @IBOutlet private var mapView: MKMapView!
   
@@ -51,21 +52,12 @@ class ViewController: UIViewController {
 //        mapView.delegate = self
 
         super.viewDidLoad()
-        
-//        let currentLoc = locationManager.location
-//
-//        func checkLondon() {
-//            if (currentLoc?.coordinate.latitude)! > 51.50 || (currentLoc?.coordinate.latitude)! < 51.48 {
-//                print("You must be in London to use the app properly!")
-//            }
-//        }
-        
-        
+                
         mapView.register(
         TreeMarkerView.self,
         forAnnotationViewWithReuseIdentifier:
           MKMapViewDefaultAnnotationViewReuseIdentifier)
-       
+               
         // Set initial location in London
         let initialLocation = CLLocation(latitude: 51.501122, longitude: -0.146041)
         mapView.centerToLocation(initialLocation)
@@ -113,9 +105,6 @@ class ViewController: UIViewController {
         print("Unexpected error: \(error).")
       }
     }
-
-    
-
 }
 
 
