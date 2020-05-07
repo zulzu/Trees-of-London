@@ -48,9 +48,13 @@ class Trees: NSObject, MKAnnotation {
         super.init()
     }
     
+    var treeTestText = "The London plane is a large deciduous tree growing 20–30 m (66–98 ft), exceptionally over 40 m (131 ft) tall, with a trunk up to 3 m (10 ft) or more in circumference. The bark is usually pale grey-green, smooth and exfoliating, or buff-brown and not exfoliating. The leaves are thick and stiff-textured, broad, palmately lobed, superficially maple-like, the leaf blade 10–20 cm (4–8 in) long and 12–25 cm (5–10 in) broad, with a petiole 3–10 cm (1–4 in) long. The young leaves in spring are coated with minute, fine, stiff hairs at first, but these wear off and by late summer the leaves are hairless or nearly so. The flowers are borne in one to three (most often two) dense spherical inflorescences on a pendulous stem, with male and female flowers on separate stems."
+    
+
+    
     
     var subtitle: String? {
-        return locationName
+        return locationName! + "\n" + "\n" + treeTestText
     }
     
     
