@@ -10,6 +10,8 @@
 		C940286F2460328400106A70 /* londonTrees_FullS2_500k.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C940286E2460328400106A70 /* londonTrees_FullS2_500k.geojson */; };
 		C940420B24473C5100A1212C /* londonTreesS.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C940420A24473C5100A1212C /* londonTreesS.geojson */; };
 		C940420F2448958100A1212C /* londonTrees_1_100k.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C940420E2448958100A1212C /* londonTrees_1_100k.geojson */; };
+		C96EB929248FE70600D48371 /* defaultTree.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C96EB928248FE70600D48371 /* defaultTree.jpg */; };
+		C96EB92D248FF23500D48371 /* Maple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C96EB92C248FF23500D48371 /* Maple.jpg */; };
 		C97F95A6245B31C900932DDE /* TreeMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F95A5245B31C900932DDE /* TreeMarkerView.swift */; };
 		C98524992445B8440047BF66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98524982445B8440047BF66 /* AppDelegate.swift */; };
 		C985249B2445B8440047BF66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C985249A2445B8440047BF66 /* SceneDelegate.swift */; };
@@ -19,13 +21,15 @@
 		C98524A52445B8450047BF66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98524A32445B8450047BF66 /* LaunchScreen.storyboard */; };
 		C98524AF2445CC450047BF66 /* Trees.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98524AE2445CC450047BF66 /* Trees.swift */; };
 		C98FFF092463285800C9B6F7 /* ClusterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98FFF082463285800C9B6F7 /* ClusterView.swift */; };
-		C98FFF0B2464406900C9B6F7 /* Platanus_x_hispanicus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C98FFF0A2464406900C9B6F7 /* Platanus_x_hispanicus.jpg */; };
+		C98FFF0B2464406900C9B6F7 /* Plane.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C98FFF0A2464406900C9B6F7 /* Plane.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C940286E2460328400106A70 /* londonTrees_FullS2_500k.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = londonTrees_FullS2_500k.geojson; sourceTree = "<group>"; };
 		C940420A24473C5100A1212C /* londonTreesS.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = londonTreesS.geojson; sourceTree = "<group>"; };
 		C940420E2448958100A1212C /* londonTrees_1_100k.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = londonTrees_1_100k.geojson; sourceTree = "<group>"; };
+		C96EB928248FE70600D48371 /* defaultTree.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = defaultTree.jpg; sourceTree = "<group>"; };
+		C96EB92C248FF23500D48371 /* Maple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Maple.jpg; sourceTree = "<group>"; };
 		C97F95A5245B31C900932DDE /* TreeMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeMarkerView.swift; sourceTree = "<group>"; };
 		C98524952445B8440047BF66 /* treesOfLondon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = treesOfLondon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C98524982445B8440047BF66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,7 +41,7 @@
 		C98524A62445B8450047BF66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C98524AE2445CC450047BF66 /* Trees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trees.swift; sourceTree = "<group>"; };
 		C98FFF082463285800C9B6F7 /* ClusterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterView.swift; sourceTree = "<group>"; };
-		C98FFF0A2464406900C9B6F7 /* Platanus_x_hispanicus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Platanus_x_hispanicus.jpg; sourceTree = "<group>"; };
+		C98FFF0A2464406900C9B6F7 /* Plane.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Plane.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +70,9 @@
 				C940420A24473C5100A1212C /* londonTreesS.geojson */,
 				C940420E2448958100A1212C /* londonTrees_1_100k.geojson */,
 				C940286E2460328400106A70 /* londonTrees_FullS2_500k.geojson */,
-				C98FFF0A2464406900C9B6F7 /* Platanus_x_hispanicus.jpg */,
+				C98FFF0A2464406900C9B6F7 /* Plane.jpg */,
+				C96EB92C248FF23500D48371 /* Maple.jpg */,
+				C96EB928248FE70600D48371 /* defaultTree.jpg */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -178,12 +184,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C98FFF0B2464406900C9B6F7 /* Platanus_x_hispanicus.jpg in Resources */,
+				C98FFF0B2464406900C9B6F7 /* Plane.jpg in Resources */,
 				C940420F2448958100A1212C /* londonTrees_1_100k.geojson in Resources */,
 				C98524A52445B8450047BF66 /* LaunchScreen.storyboard in Resources */,
+				C96EB929248FE70600D48371 /* defaultTree.jpg in Resources */,
 				C98524A22445B8450047BF66 /* Assets.xcassets in Resources */,
 				C940286F2460328400106A70 /* londonTrees_FullS2_500k.geojson in Resources */,
 				C98524A02445B8440047BF66 /* Main.storyboard in Resources */,
+				C96EB92D248FF23500D48371 /* Maple.jpg in Resources */,
 				C940420B24473C5100A1212C /* londonTreesS.geojson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

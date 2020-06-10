@@ -121,8 +121,8 @@ private extension MKMapView {
       longitudinalMeters: regionRadius)
     setRegion(coordinateRegion, animated: true)
   }
+    
 }
-
 
 
 extension ViewController: CLLocationManagerDelegate {
@@ -138,3 +138,5 @@ extension ViewController: CLLocationManagerDelegate {
       print(error.localizedDescription)
    }
 }
+
+

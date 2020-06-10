@@ -9,6 +9,7 @@
 import Foundation
 import MapKit
 
+
 class TreeMarkerView: MKMarkerAnnotationView {
   override var annotation: MKAnnotation? {
     willSet {
@@ -19,13 +20,18 @@ class TreeMarkerView: MKMarkerAnnotationView {
       }
       canShowCallout = true
       calloutOffset = CGPoint(x: -5, y: 5)
-//      rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+      rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
         
         let treeImage = UIButton(frame: CGRect(
           origin: CGPoint.zero,
           size: CGSize(width: 100, height: 100)))
-        treeImage.setBackgroundImage(#imageLiteral(resourceName: "Platanus_x_hispanicus.jpg"), for: .normal)
+                
+        //        treeImage.setBackgroundImage(#imageLiteral(resourceName: "Plane.jpg"), for: .normal)
+
+        var treeIconCase = UIImage(named: "\(treeIcon.discipline ?? "defaultTree").jpg")
+        treeImage.setBackgroundImage(treeIconCase, for: .normal)
         rightCalloutAccessoryView = treeImage
+        
 
         
         let detailLabel = UILabel()
