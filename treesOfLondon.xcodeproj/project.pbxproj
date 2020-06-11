@@ -20,6 +20,8 @@
 		C98524A22445B8450047BF66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C98524A12445B8450047BF66 /* Assets.xcassets */; };
 		C98524A52445B8450047BF66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98524A32445B8450047BF66 /* LaunchScreen.storyboard */; };
 		C98524AF2445CC450047BF66 /* Trees.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98524AE2445CC450047BF66 /* Trees.swift */; };
+		C98AA28624913618003AAFF2 /* InfoPanelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98AA28424913618003AAFF2 /* InfoPanelController.swift */; };
+		C98AA28724913618003AAFF2 /* InfoPanelController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C98AA28524913618003AAFF2 /* InfoPanelController.xib */; };
 		C98FFF092463285800C9B6F7 /* ClusterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98FFF082463285800C9B6F7 /* ClusterView.swift */; };
 		C98FFF0B2464406900C9B6F7 /* Plane.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C98FFF0A2464406900C9B6F7 /* Plane.jpg */; };
 /* End PBXBuildFile section */
@@ -40,6 +42,8 @@
 		C98524A42445B8450047BF66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C98524A62445B8450047BF66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C98524AE2445CC450047BF66 /* Trees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trees.swift; sourceTree = "<group>"; };
+		C98AA28424913618003AAFF2 /* InfoPanelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPanelController.swift; sourceTree = "<group>"; };
+		C98AA28524913618003AAFF2 /* InfoPanelController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoPanelController.xib; sourceTree = "<group>"; };
 		C98FFF082463285800C9B6F7 /* ClusterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterView.swift; sourceTree = "<group>"; };
 		C98FFF0A2464406900C9B6F7 /* Plane.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Plane.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +89,8 @@
 				C98524A32445B8450047BF66 /* LaunchScreen.storyboard */,
 				C985249C2445B8440047BF66 /* ViewController.swift */,
 				C985249E2445B8440047BF66 /* Main.storyboard */,
+				C98AA28424913618003AAFF2 /* InfoPanelController.swift */,
+				C98AA28524913618003AAFF2 /* InfoPanelController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -190,6 +196,7 @@
 				C96EB929248FE70600D48371 /* defaultTree.jpg in Resources */,
 				C98524A22445B8450047BF66 /* Assets.xcassets in Resources */,
 				C940286F2460328400106A70 /* londonTrees_FullS2_500k.geojson in Resources */,
+				C98AA28724913618003AAFF2 /* InfoPanelController.xib in Resources */,
 				C98524A02445B8440047BF66 /* Main.storyboard in Resources */,
 				C96EB92D248FF23500D48371 /* Maple.jpg in Resources */,
 				C940420B24473C5100A1212C /* londonTreesS.geojson in Resources */,
@@ -208,6 +215,7 @@
 				C97F95A6245B31C900932DDE /* TreeMarkerView.swift in Sources */,
 				C98FFF092463285800C9B6F7 /* ClusterView.swift in Sources */,
 				C98524992445B8440047BF66 /* AppDelegate.swift in Sources */,
+				C98AA28624913618003AAFF2 /* InfoPanelController.swift in Sources */,
 				C985249B2445B8440047BF66 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,6 +20,14 @@ class ViewController: UIViewController, MKMapViewDelegate {
         currentLocation()
     }
     
+    @IBAction func infoButtonPressed(_ sender: UIBarButtonItem) {
+        let infoPanel = InfoPanelController()
+        infoPanel.modalPresentationStyle = .custom
+        present(infoPanel, animated: true, completion: nil)
+    }
+    
+
+    
     fileprivate let locationManager: CLLocationManager = {
         let manager = CLLocationManager()
         manager.requestWhenInUseAuthorization()
