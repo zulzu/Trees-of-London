@@ -15,18 +15,16 @@ import CoreLocation
 class ViewController: UIViewController, MKMapViewDelegate {
 
     @IBOutlet private var mapView: MKMapView!
-  
-    @IBAction func locationButtonPressed(_ sender: UIBarButtonItem) {
-        currentLocation()
-    }
-    
-    @IBAction func infoButtonPressed(_ sender: UIBarButtonItem) {
+      
+    @IBAction func infoBtnPressed(_ sender: UIButton) {
         let infoPanel = InfoPanelController()
         infoPanel.modalPresentationStyle = .custom
         present(infoPanel, animated: true, completion: nil)
     }
     
-
+    @IBAction func locationBtnPressed(_ sender: UIButton) {
+        currentLocation()
+    }
     
     fileprivate let locationManager: CLLocationManager = {
         let manager = CLLocationManager()

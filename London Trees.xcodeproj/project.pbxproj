@@ -10,6 +10,8 @@
 		C940286F2460328400106A70 /* londonTrees_FullS2_500k.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C940286E2460328400106A70 /* londonTrees_FullS2_500k.geojson */; };
 		C940420B24473C5100A1212C /* londonTreesS.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C940420A24473C5100A1212C /* londonTreesS.geojson */; };
 		C940420F2448958100A1212C /* londonTrees_1_100k.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C940420E2448958100A1212C /* londonTrees_1_100k.geojson */; };
+		C9513B12249796C200786B6B /* location_icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9513B10249796C200786B6B /* location_icon2x.png */; };
+		C9513B13249796C200786B6B /* info_icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9513B11249796C200786B6B /* info_icon2x.png */; };
 		C96EB929248FE70600D48371 /* defaultTree.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C96EB928248FE70600D48371 /* defaultTree.jpg */; };
 		C96EB92D248FF23500D48371 /* Maple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C96EB92C248FF23500D48371 /* Maple.jpg */; };
 		C97F95A6245B31C900932DDE /* TreeMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F95A5245B31C900932DDE /* TreeMarkerView.swift */; };
@@ -30,10 +32,12 @@
 		C940286E2460328400106A70 /* londonTrees_FullS2_500k.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = londonTrees_FullS2_500k.geojson; sourceTree = "<group>"; };
 		C940420A24473C5100A1212C /* londonTreesS.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = londonTreesS.geojson; sourceTree = "<group>"; };
 		C940420E2448958100A1212C /* londonTrees_1_100k.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = londonTrees_1_100k.geojson; sourceTree = "<group>"; };
+		C9513B10249796C200786B6B /* location_icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location_icon2x.png; sourceTree = "<group>"; };
+		C9513B11249796C200786B6B /* info_icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_icon2x.png; sourceTree = "<group>"; };
 		C96EB928248FE70600D48371 /* defaultTree.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = defaultTree.jpg; sourceTree = "<group>"; };
 		C96EB92C248FF23500D48371 /* Maple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Maple.jpg; sourceTree = "<group>"; };
 		C97F95A5245B31C900932DDE /* TreeMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeMarkerView.swift; sourceTree = "<group>"; };
-		C98524952445B8440047BF66 /* treesOfLondon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = treesOfLondon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C98524952445B8440047BF66 /* London Trees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "London Trees.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C98524982445B8440047BF66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C985249A2445B8440047BF66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C985249C2445B8440047BF66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 				C98FFF0A2464406900C9B6F7 /* Plane.jpg */,
 				C96EB92C248FF23500D48371 /* Maple.jpg */,
 				C96EB928248FE70600D48371 /* defaultTree.jpg */,
+				C9513B11249796C200786B6B /* info_icon2x.png */,
+				C9513B10249796C200786B6B /* location_icon2x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -114,7 +120,7 @@
 		C98524962445B8440047BF66 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C98524952445B8440047BF66 /* treesOfLondon.app */,
+				C98524952445B8440047BF66 /* London Trees.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,9 +141,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C98524942445B8440047BF66 /* treesOfLondon */ = {
+		C98524942445B8440047BF66 /* London Trees */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C98524A92445B8450047BF66 /* Build configuration list for PBXNativeTarget "treesOfLondon" */;
+			buildConfigurationList = C98524A92445B8450047BF66 /* Build configuration list for PBXNativeTarget "London Trees" */;
 			buildPhases = (
 				C98524912445B8440047BF66 /* Sources */,
 				C98524922445B8440047BF66 /* Frameworks */,
@@ -147,9 +153,9 @@
 			);
 			dependencies = (
 			);
-			name = treesOfLondon;
+			name = "London Trees";
 			productName = treesOfLondon;
-			productReference = C98524952445B8440047BF66 /* treesOfLondon.app */;
+			productReference = C98524952445B8440047BF66 /* London Trees.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -167,7 +173,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C98524902445B8440047BF66 /* Build configuration list for PBXProject "treesOfLondon" */;
+			buildConfigurationList = C98524902445B8440047BF66 /* Build configuration list for PBXProject "London Trees" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -180,7 +186,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C98524942445B8440047BF66 /* treesOfLondon */,
+				C98524942445B8440047BF66 /* London Trees */,
 			);
 		};
 /* End PBXProject section */
@@ -196,7 +202,9 @@
 				C96EB929248FE70600D48371 /* defaultTree.jpg in Resources */,
 				C98524A22445B8450047BF66 /* Assets.xcassets in Resources */,
 				C940286F2460328400106A70 /* londonTrees_FullS2_500k.geojson in Resources */,
+				C9513B12249796C200786B6B /* location_icon2x.png in Resources */,
 				C98AA28724913618003AAFF2 /* InfoPanelController.xib in Resources */,
+				C9513B13249796C200786B6B /* info_icon2x.png in Resources */,
 				C98524A02445B8440047BF66 /* Main.storyboard in Resources */,
 				C96EB92D248FF23500D48371 /* Maple.jpg in Resources */,
 				C940420B24473C5100A1212C /* londonTreesS.geojson in Resources */,
@@ -363,6 +371,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7U8H9SK8NB;
 				INFOPLIST_FILE = treesOfLondon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -370,7 +379,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.randomName.treesOfLondon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -381,6 +390,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7U8H9SK8NB;
 				INFOPLIST_FILE = treesOfLondon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -388,14 +398,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.randomName.treesOfLondon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C98524902445B8440047BF66 /* Build configuration list for PBXProject "treesOfLondon" */ = {
+		C98524902445B8440047BF66 /* Build configuration list for PBXProject "London Trees" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C98524A72445B8450047BF66 /* Debug */,
@@ -404,7 +414,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C98524A92445B8450047BF66 /* Build configuration list for PBXNativeTarget "treesOfLondon" */ = {
+		C98524A92445B8450047BF66 /* Build configuration list for PBXNativeTarget "London Trees" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C98524AA2445B8450047BF66 /* Debug */,

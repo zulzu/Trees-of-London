@@ -10,48 +10,51 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="treesOfLondon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="London_Trees" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lUq-44-t1A">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </mapView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aHK-d9-Bcp">
-                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3q-6J-4wS">
+                                <rect key="frame" x="314" y="762" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="fp2-Jl-oCN"/>
+                                    <constraint firstAttribute="width" constant="50" id="BJr-XN-Yov"/>
+                                    <constraint firstAttribute="height" constant="50" id="Grt-VE-jMf"/>
                                 </constraints>
-                                <items>
-                                    <barButtonItem width="30" style="plain" systemItem="flexibleSpace" id="aAa-cV-JB5"/>
-                                    <barButtonItem title="Item" image="info.circle" catalog="system" id="TRD-b3-Y00">
-                                        <connections>
-                                            <action selector="infoButtonPressed:" destination="BYZ-38-t0r" id="6RO-s7-8aj"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="fCy-cr-ST5"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="w9X-VI-YFu"/>
-                                    <barButtonItem title="Item" image="scope" catalog="system" id="kkN-M6-tEt">
-                                        <connections>
-                                            <action selector="locationButtonPressed:" destination="BYZ-38-t0r" id="2YW-bW-pzK"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem width="30" style="plain" systemItem="flexibleSpace" id="dZ3-Se-7hR"/>
-                                </items>
-                                <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </toolbar>
+                                <state key="normal" image="info_icon2x.png">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                                <connections>
+                                    <action selector="infoBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aGG-o3-rfS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1X-PC-63Q">
+                                <rect key="frame" x="314" y="662" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="MGZ-xX-FsG"/>
+                                    <constraint firstAttribute="height" constant="50" id="mPE-n5-Wgg"/>
+                                </constraints>
+                                <state key="normal" image="location_icon2x.png">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                                <connections>
+                                    <action selector="locationBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ffQ-oa-1jj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B1X-PC-63Q" secondAttribute="trailing" constant="50" id="1ri-7X-usL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B1X-PC-63Q" secondAttribute="trailing" constant="50" id="4Ew-cO-Nnh"/>
                             <constraint firstItem="lUq-44-t1A" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5o2-uQ-nAS"/>
-                            <constraint firstItem="aHK-d9-Bcp" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" constant="-34" id="EPA-ea-Bni"/>
-                            <constraint firstItem="aHK-d9-Bcp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KjO-Ee-hPq"/>
+                            <constraint firstItem="K3q-6J-4wS" firstAttribute="top" secondItem="B1X-PC-63Q" secondAttribute="bottom" constant="50" id="DDX-ez-Cyh"/>
                             <constraint firstItem="lUq-44-t1A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RBF-Tn-Huj"/>
-                            <constraint firstItem="aHK-d9-Bcp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UDZ-B4-c5r"/>
-                            <constraint firstItem="aHK-d9-Bcp" firstAttribute="top" secondItem="lUq-44-t1A" secondAttribute="bottom" id="sGs-Ut-aVp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="K3q-6J-4wS" secondAttribute="bottom" constant="50" id="h2P-qQ-GDu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K3q-6J-4wS" secondAttribute="trailing" constant="50" id="qFR-tB-GET"/>
+                            <constraint firstAttribute="bottom" secondItem="lUq-44-t1A" secondAttribute="bottom" id="tLf-Rv-PGN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lUq-44-t1A" secondAttribute="trailing" id="u5b-za-jet"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -66,7 +69,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="info.circle" catalog="system" width="128" height="121"/>
-        <image name="scope" catalog="system" width="128" height="122"/>
+        <image name="info_icon2x.png" width="140" height="140"/>
+        <image name="location_icon2x.png" width="140" height="140"/>
     </resources>
 </document>
