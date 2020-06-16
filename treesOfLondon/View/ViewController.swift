@@ -26,6 +26,10 @@ class ViewController: UIViewController, MKMapViewDelegate {
         currentLocation()
     }
     
+    @IBOutlet weak var locationButton: UIButton!
+    @IBOutlet weak var infoButton: UIButton!
+    
+    
     fileprivate let locationManager: CLLocationManager = {
         let manager = CLLocationManager()
         manager.requestWhenInUseAuthorization()
@@ -54,6 +58,10 @@ class ViewController: UIViewController, MKMapViewDelegate {
     private var trees: [Trees] = []
     
     override func viewDidLoad() {
+                
+        locationButton.buttonShadow()
+        infoButton.buttonShadow()
+        
         
 //        mapView.delegate = self
 
