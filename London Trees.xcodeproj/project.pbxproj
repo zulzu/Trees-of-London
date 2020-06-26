@@ -25,6 +25,30 @@
 		C999783A24A6466700131C15 /* location_icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C999783724A6466600131C15 /* location_icon2x.png */; };
 		C999783B24A6466700131C15 /* close_icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C999783824A6466600131C15 /* close_icon2x.png */; };
 		C999783D24A6469800131C15 /* londontrees_load_image3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C999783C24A6469800131C15 /* londontrees_load_image3x.png */; };
+		C999785724A649FC00131C15 /* Birch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999783F24A649FB00131C15 /* Birch.jpg */; };
+		C999785824A649FC00131C15 /* Pine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784024A649FB00131C15 /* Pine.jpg */; };
+		C999785924A649FC00131C15 /* Plane.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784124A649FB00131C15 /* Plane.jpg */; };
+		C999785A24A649FC00131C15 /* Maple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784224A649FB00131C15 /* Maple.jpg */; };
+		C999785B24A649FC00131C15 /* Willow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784324A649FB00131C15 /* Willow.jpg */; };
+		C999785C24A649FC00131C15 /* Apple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784424A649FB00131C15 /* Apple.jpg */; };
+		C999785D24A649FC00131C15 /* Hornbeam.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784524A649FB00131C15 /* Hornbeam.jpg */; };
+		C999785E24A649FC00131C15 /* Unknown.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784624A649FB00131C15 /* Unknown.jpg */; };
+		C999785F24A649FC00131C15 /* Other.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784724A649FB00131C15 /* Other.jpg */; };
+		C999786024A649FC00131C15 /* Poplar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784824A649FB00131C15 /* Poplar.jpg */; };
+		C999786124A649FC00131C15 /* Beech.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784924A649FB00131C15 /* Beech.jpg */; };
+		C999786224A649FC00131C15 /* Lime.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784A24A649FB00131C15 /* Lime.jpg */; };
+		C999786324A649FC00131C15 /* Whitebeam.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784B24A649FB00131C15 /* Whitebeam.jpg */; };
+		C999786424A649FC00131C15 /* Chesnut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784C24A649FB00131C15 /* Chesnut.jpg */; };
+		C999786524A649FC00131C15 /* Elm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784D24A649FB00131C15 /* Elm.jpg */; };
+		C999786624A649FC00131C15 /* Cherry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784E24A649FB00131C15 /* Cherry.jpg */; };
+		C999786724A649FC00131C15 /* Hawthorn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784F24A649FB00131C15 /* Hawthorn.jpg */; };
+		C999786824A649FC00131C15 /* Oak.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999785024A649FB00131C15 /* Oak.jpg */; };
+		C999786924A649FC00131C15 /* Cypress.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999785124A649FC00131C15 /* Cypress.jpg */; };
+		C999786A24A649FC00131C15 /* Ash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999785224A649FC00131C15 /* Ash.jpg */; };
+		C999786B24A649FC00131C15 /* Alder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999785324A649FC00131C15 /* Alder.jpg */; };
+		C999786C24A649FC00131C15 /* Black Locust.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999785424A649FC00131C15 /* Black Locust.jpg */; };
+		C999786D24A649FC00131C15 /* Hazelnut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999785524A649FC00131C15 /* Hazelnut.jpg */; };
+		C999786E24A649FC00131C15 /* Pear.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999785624A649FC00131C15 /* Pear.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +72,30 @@
 		C999783724A6466600131C15 /* location_icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location_icon2x.png; sourceTree = "<group>"; };
 		C999783824A6466600131C15 /* close_icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close_icon2x.png; sourceTree = "<group>"; };
 		C999783C24A6469800131C15 /* londontrees_load_image3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = londontrees_load_image3x.png; sourceTree = "<group>"; };
+		C999783F24A649FB00131C15 /* Birch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Birch.jpg; sourceTree = "<group>"; };
+		C999784024A649FB00131C15 /* Pine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Pine.jpg; sourceTree = "<group>"; };
+		C999784124A649FB00131C15 /* Plane.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Plane.jpg; sourceTree = "<group>"; };
+		C999784224A649FB00131C15 /* Maple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Maple.jpg; sourceTree = "<group>"; };
+		C999784324A649FB00131C15 /* Willow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Willow.jpg; sourceTree = "<group>"; };
+		C999784424A649FB00131C15 /* Apple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Apple.jpg; sourceTree = "<group>"; };
+		C999784524A649FB00131C15 /* Hornbeam.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hornbeam.jpg; sourceTree = "<group>"; };
+		C999784624A649FB00131C15 /* Unknown.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Unknown.jpg; sourceTree = "<group>"; };
+		C999784724A649FB00131C15 /* Other.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Other.jpg; sourceTree = "<group>"; };
+		C999784824A649FB00131C15 /* Poplar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Poplar.jpg; sourceTree = "<group>"; };
+		C999784924A649FB00131C15 /* Beech.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Beech.jpg; sourceTree = "<group>"; };
+		C999784A24A649FB00131C15 /* Lime.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Lime.jpg; sourceTree = "<group>"; };
+		C999784B24A649FB00131C15 /* Whitebeam.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Whitebeam.jpg; sourceTree = "<group>"; };
+		C999784C24A649FB00131C15 /* Chesnut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Chesnut.jpg; sourceTree = "<group>"; };
+		C999784D24A649FB00131C15 /* Elm.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Elm.jpg; sourceTree = "<group>"; };
+		C999784E24A649FB00131C15 /* Cherry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cherry.jpg; sourceTree = "<group>"; };
+		C999784F24A649FB00131C15 /* Hawthorn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hawthorn.jpg; sourceTree = "<group>"; };
+		C999785024A649FB00131C15 /* Oak.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Oak.jpg; sourceTree = "<group>"; };
+		C999785124A649FC00131C15 /* Cypress.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cypress.jpg; sourceTree = "<group>"; };
+		C999785224A649FC00131C15 /* Ash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ash.jpg; sourceTree = "<group>"; };
+		C999785324A649FC00131C15 /* Alder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Alder.jpg; sourceTree = "<group>"; };
+		C999785424A649FC00131C15 /* Black Locust.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Black Locust.jpg"; sourceTree = "<group>"; };
+		C999785524A649FC00131C15 /* Hazelnut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hazelnut.jpg; sourceTree = "<group>"; };
+		C999785624A649FC00131C15 /* Pear.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Pear.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +120,7 @@
 		C97F95A8245B31F700932DDE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C999783E24A649CF00131C15 /* treeImages */,
 				C98524A12445B8450047BF66 /* Assets.xcassets */,
 				C940420A24473C5100A1212C /* londonTreesS.geojson */,
 				C940420E2448958100A1212C /* londonTrees_1_100k.geojson */,
@@ -135,6 +184,37 @@
 			path = treesOfLondon;
 			sourceTree = "<group>";
 		};
+		C999783E24A649CF00131C15 /* treeImages */ = {
+			isa = PBXGroup;
+			children = (
+				C999785324A649FC00131C15 /* Alder.jpg */,
+				C999784424A649FB00131C15 /* Apple.jpg */,
+				C999785224A649FC00131C15 /* Ash.jpg */,
+				C999784924A649FB00131C15 /* Beech.jpg */,
+				C999783F24A649FB00131C15 /* Birch.jpg */,
+				C999785424A649FC00131C15 /* Black Locust.jpg */,
+				C999784E24A649FB00131C15 /* Cherry.jpg */,
+				C999784C24A649FB00131C15 /* Chesnut.jpg */,
+				C999785124A649FC00131C15 /* Cypress.jpg */,
+				C999784D24A649FB00131C15 /* Elm.jpg */,
+				C999784F24A649FB00131C15 /* Hawthorn.jpg */,
+				C999785524A649FC00131C15 /* Hazelnut.jpg */,
+				C999784524A649FB00131C15 /* Hornbeam.jpg */,
+				C999784A24A649FB00131C15 /* Lime.jpg */,
+				C999784224A649FB00131C15 /* Maple.jpg */,
+				C999785024A649FB00131C15 /* Oak.jpg */,
+				C999784724A649FB00131C15 /* Other.jpg */,
+				C999785624A649FC00131C15 /* Pear.jpg */,
+				C999784024A649FB00131C15 /* Pine.jpg */,
+				C999784124A649FB00131C15 /* Plane.jpg */,
+				C999784824A649FB00131C15 /* Poplar.jpg */,
+				C999784624A649FB00131C15 /* Unknown.jpg */,
+				C999784B24A649FB00131C15 /* Whitebeam.jpg */,
+				C999784324A649FB00131C15 /* Willow.jpg */,
+			);
+			path = treeImages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -194,15 +274,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				C999783D24A6469800131C15 /* londontrees_load_image3x.png in Resources */,
+				C999785D24A649FC00131C15 /* Hornbeam.jpg in Resources */,
+				C999786324A649FC00131C15 /* Whitebeam.jpg in Resources */,
+				C999786224A649FC00131C15 /* Lime.jpg in Resources */,
+				C999785924A649FC00131C15 /* Plane.jpg in Resources */,
 				C940420F2448958100A1212C /* londonTrees_1_100k.geojson in Resources */,
 				C999783A24A6466700131C15 /* location_icon2x.png in Resources */,
+				C999785F24A649FC00131C15 /* Other.jpg in Resources */,
 				C98524A52445B8450047BF66 /* LaunchScreen.storyboard in Resources */,
+				C999786924A649FC00131C15 /* Cypress.jpg in Resources */,
+				C999786124A649FC00131C15 /* Beech.jpg in Resources */,
 				C98524A22445B8450047BF66 /* Assets.xcassets in Resources */,
+				C999786A24A649FC00131C15 /* Ash.jpg in Resources */,
+				C999785B24A649FC00131C15 /* Willow.jpg in Resources */,
+				C999786424A649FC00131C15 /* Chesnut.jpg in Resources */,
+				C999786D24A649FC00131C15 /* Hazelnut.jpg in Resources */,
 				C999783B24A6466700131C15 /* close_icon2x.png in Resources */,
+				C999786624A649FC00131C15 /* Cherry.jpg in Resources */,
 				C98AA28724913618003AAFF2 /* InfoPanelController.xib in Resources */,
+				C999786524A649FC00131C15 /* Elm.jpg in Resources */,
+				C999786B24A649FC00131C15 /* Alder.jpg in Resources */,
+				C999786E24A649FC00131C15 /* Pear.jpg in Resources */,
+				C999786824A649FC00131C15 /* Oak.jpg in Resources */,
 				C999783924A6466700131C15 /* info_icon2x.png in Resources */,
+				C999786C24A649FC00131C15 /* Black Locust.jpg in Resources */,
+				C999785C24A649FC00131C15 /* Apple.jpg in Resources */,
+				C999785724A649FC00131C15 /* Birch.jpg in Resources */,
 				C98524A02445B8440047BF66 /* Main.storyboard in Resources */,
+				C999785E24A649FC00131C15 /* Unknown.jpg in Resources */,
 				C940420B24473C5100A1212C /* londonTreesS.geojson in Resources */,
+				C999785824A649FC00131C15 /* Pine.jpg in Resources */,
+				C999785A24A649FC00131C15 /* Maple.jpg in Resources */,
+				C999786724A649FC00131C15 /* Hawthorn.jpg in Resources */,
+				C999786024A649FC00131C15 /* Poplar.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
