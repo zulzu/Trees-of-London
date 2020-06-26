@@ -7,14 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C940286F2460328400106A70 /* londonTrees_FullS2_500k.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C940286E2460328400106A70 /* londonTrees_FullS2_500k.geojson */; };
 		C940420B24473C5100A1212C /* londonTreesS.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C940420A24473C5100A1212C /* londonTreesS.geojson */; };
 		C940420F2448958100A1212C /* londonTrees_1_100k.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C940420E2448958100A1212C /* londonTrees_1_100k.geojson */; };
-		C9513B12249796C200786B6B /* location_icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9513B10249796C200786B6B /* location_icon2x.png */; };
-		C9513B13249796C200786B6B /* info_icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9513B11249796C200786B6B /* info_icon2x.png */; };
 		C9513B152497E5D800786B6B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9513B142497E5D800786B6B /* Extensions.swift */; };
-		C96EB929248FE70600D48371 /* defaultTree.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C96EB928248FE70600D48371 /* defaultTree.jpg */; };
-		C96EB92D248FF23500D48371 /* Maple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C96EB92C248FF23500D48371 /* Maple.jpg */; };
 		C97F95A6245B31C900932DDE /* TreeMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F95A5245B31C900932DDE /* TreeMarkerView.swift */; };
 		C98524992445B8440047BF66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98524982445B8440047BF66 /* AppDelegate.swift */; };
 		C985249B2445B8440047BF66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C985249A2445B8440047BF66 /* SceneDelegate.swift */; };
@@ -26,18 +21,16 @@
 		C98AA28624913618003AAFF2 /* InfoPanelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98AA28424913618003AAFF2 /* InfoPanelController.swift */; };
 		C98AA28724913618003AAFF2 /* InfoPanelController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C98AA28524913618003AAFF2 /* InfoPanelController.xib */; };
 		C98FFF092463285800C9B6F7 /* ClusterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98FFF082463285800C9B6F7 /* ClusterView.swift */; };
-		C98FFF0B2464406900C9B6F7 /* Plane.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C98FFF0A2464406900C9B6F7 /* Plane.jpg */; };
+		C999783924A6466700131C15 /* info_icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C999783624A6466600131C15 /* info_icon2x.png */; };
+		C999783A24A6466700131C15 /* location_icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C999783724A6466600131C15 /* location_icon2x.png */; };
+		C999783B24A6466700131C15 /* close_icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C999783824A6466600131C15 /* close_icon2x.png */; };
+		C999783D24A6469800131C15 /* londontrees_load_image3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C999783C24A6469800131C15 /* londontrees_load_image3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C940286E2460328400106A70 /* londonTrees_FullS2_500k.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = londonTrees_FullS2_500k.geojson; sourceTree = "<group>"; };
 		C940420A24473C5100A1212C /* londonTreesS.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = londonTreesS.geojson; sourceTree = "<group>"; };
 		C940420E2448958100A1212C /* londonTrees_1_100k.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = londonTrees_1_100k.geojson; sourceTree = "<group>"; };
-		C9513B10249796C200786B6B /* location_icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location_icon2x.png; sourceTree = "<group>"; };
-		C9513B11249796C200786B6B /* info_icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_icon2x.png; sourceTree = "<group>"; };
 		C9513B142497E5D800786B6B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		C96EB928248FE70600D48371 /* defaultTree.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = defaultTree.jpg; sourceTree = "<group>"; };
-		C96EB92C248FF23500D48371 /* Maple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Maple.jpg; sourceTree = "<group>"; };
 		C97F95A5245B31C900932DDE /* TreeMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeMarkerView.swift; sourceTree = "<group>"; };
 		C98524952445B8440047BF66 /* London Trees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "London Trees.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C98524982445B8440047BF66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,7 +44,10 @@
 		C98AA28424913618003AAFF2 /* InfoPanelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPanelController.swift; sourceTree = "<group>"; };
 		C98AA28524913618003AAFF2 /* InfoPanelController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoPanelController.xib; sourceTree = "<group>"; };
 		C98FFF082463285800C9B6F7 /* ClusterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterView.swift; sourceTree = "<group>"; };
-		C98FFF0A2464406900C9B6F7 /* Plane.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Plane.jpg; sourceTree = "<group>"; };
+		C999783624A6466600131C15 /* info_icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_icon2x.png; sourceTree = "<group>"; };
+		C999783724A6466600131C15 /* location_icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location_icon2x.png; sourceTree = "<group>"; };
+		C999783824A6466600131C15 /* close_icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close_icon2x.png; sourceTree = "<group>"; };
+		C999783C24A6469800131C15 /* londontrees_load_image3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = londontrees_load_image3x.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +75,10 @@
 				C98524A12445B8450047BF66 /* Assets.xcassets */,
 				C940420A24473C5100A1212C /* londonTreesS.geojson */,
 				C940420E2448958100A1212C /* londonTrees_1_100k.geojson */,
-				C940286E2460328400106A70 /* londonTrees_FullS2_500k.geojson */,
-				C98FFF0A2464406900C9B6F7 /* Plane.jpg */,
-				C96EB92C248FF23500D48371 /* Maple.jpg */,
-				C96EB928248FE70600D48371 /* defaultTree.jpg */,
-				C9513B11249796C200786B6B /* info_icon2x.png */,
-				C9513B10249796C200786B6B /* location_icon2x.png */,
+				C999783824A6466600131C15 /* close_icon2x.png */,
+				C999783624A6466600131C15 /* info_icon2x.png */,
+				C999783724A6466600131C15 /* location_icon2x.png */,
+				C999783C24A6469800131C15 /* londontrees_load_image3x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -199,17 +193,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C98FFF0B2464406900C9B6F7 /* Plane.jpg in Resources */,
+				C999783D24A6469800131C15 /* londontrees_load_image3x.png in Resources */,
 				C940420F2448958100A1212C /* londonTrees_1_100k.geojson in Resources */,
+				C999783A24A6466700131C15 /* location_icon2x.png in Resources */,
 				C98524A52445B8450047BF66 /* LaunchScreen.storyboard in Resources */,
-				C96EB929248FE70600D48371 /* defaultTree.jpg in Resources */,
 				C98524A22445B8450047BF66 /* Assets.xcassets in Resources */,
-				C940286F2460328400106A70 /* londonTrees_FullS2_500k.geojson in Resources */,
-				C9513B12249796C200786B6B /* location_icon2x.png in Resources */,
+				C999783B24A6466700131C15 /* close_icon2x.png in Resources */,
 				C98AA28724913618003AAFF2 /* InfoPanelController.xib in Resources */,
-				C9513B13249796C200786B6B /* info_icon2x.png in Resources */,
+				C999783924A6466700131C15 /* info_icon2x.png in Resources */,
 				C98524A02445B8440047BF66 /* Main.storyboard in Resources */,
-				C96EB92D248FF23500D48371 /* Maple.jpg in Resources */,
 				C940420B24473C5100A1212C /* londonTreesS.geojson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
