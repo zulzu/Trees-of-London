@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InfoPanelController" customModule="London_Trees" customModuleProvider="target">
             <connections>
+                <outlet property="linkLabel" destination="pXq-k1-DHz" id="OG4-E9-UFr"/>
                 <outlet property="textLabel" destination="Uqo-ni-2Gj" id="ykK-1K-86m"/>
                 <outlet property="titleLabel" destination="FUv-VS-sT4" id="hfN-Ow-AyT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -48,9 +49,21 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="*link*" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pXq-k1-DHz">
+                            <rect key="frame" x="20" y="190" width="369" height="35.5"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" red="0.0" green="0.44962292909622192" blue="0.30840718746185303" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.0" green="0.44962292909622192" blue="0.30840718746185303" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="url"/>
+                            <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                        </textView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
+                        <constraint firstItem="pXq-k1-DHz" firstAttribute="leading" secondItem="VX3-zW-CF9" secondAttribute="leading" constant="20" id="4Ne-Bl-hXa"/>
+                        <constraint firstAttribute="trailing" secondItem="pXq-k1-DHz" secondAttribute="trailing" constant="25" id="b9Q-ly-8fB"/>
+                        <constraint firstItem="pXq-k1-DHz" firstAttribute="top" secondItem="Uqo-ni-2Gj" secondAttribute="bottom" constant="10" id="ilC-SZ-klL"/>
                         <constraint firstItem="Uqo-ni-2Gj" firstAttribute="top" secondItem="FUv-VS-sT4" secondAttribute="bottom" constant="25" id="oOF-2R-YI3"/>
                     </constraints>
                 </view>
