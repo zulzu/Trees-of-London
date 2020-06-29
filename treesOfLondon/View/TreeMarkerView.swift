@@ -14,36 +14,48 @@ class TreeMarkerView: MKMarkerAnnotationView {
   override var annotation: MKAnnotation? {
     willSet {
 
-
+        
       guard let treeIcon = newValue as? Trees else {
         return
       }
+                
       canShowCallout = true
       calloutOffset = CGPoint(x: -5, y: 5)
       rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
         
         let treeImage = UIButton(frame: CGRect(
           origin: CGPoint.zero,
-          size: CGSize(width: 100, height: 100)))
+          size: CGSize(width: 80, height: 80)))
                 
         //        treeImage.setBackgroundImage(#imageLiteral(resourceName: "Plane.jpg"), for: .normal)
 
-        var treeIconCase = UIImage(named: "\(treeIcon.discipline ?? "defaultTree").jpg")
+        let treeIconCase = UIImage(named: "\(treeIcon.realTreeName).jpg")
         treeImage.setBackgroundImage(treeIconCase, for: .normal)
         rightCalloutAccessoryView = treeImage
-        
-
-        
+                
         let detailLabel = UILabel()
         detailLabel.numberOfLines = 0
         detailLabel.font = detailLabel.font.withSize(12)
+//        detailLabel.font = detailLabel.attributedText
         detailLabel.text = treeIcon.subtitle
         detailCalloutAccessoryView = detailLabel
         
-      markerTintColor = treeIcon.markerTintColor
-      if let letter = treeIcon.discipline?.first {
-        glyphText = String(letter)
-      }
+//      markerTintColor = treeIcon.markerTintColor
+//      if let letter = treeIcon.discipline?.first {
+//        glyphText = String(letter)
+//      }
+        markerTintColor = treeIcon.markerTintColor
+        if let letter = treeIcon.realTreeName.first {
+          glyphText = String(letter)
+        }
+        
+//        let mainTitle = UILabel()
+//        mainTitle.numberOfLines = 0
+//        detailLabel.text = treeIcon.title
+//        leftCalloutAccessoryView = mainTitle
+        
+        treeIcon.title = treeIcon.realTreeName
+                
         clusteringIdentifier = String(describing: ClusterView.self)
     }
   }

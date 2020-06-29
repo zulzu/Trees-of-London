@@ -49,6 +49,7 @@
 		C999786C24A649FC00131C15 /* Black Locust.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999785424A649FC00131C15 /* Black Locust.jpg */; };
 		C999786D24A649FC00131C15 /* Hazelnut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999785524A649FC00131C15 /* Hazelnut.jpg */; };
 		C999786E24A649FC00131C15 /* Pear.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999785624A649FC00131C15 /* Pear.jpg */; };
+		C999787024AA429800131C15 /* londonTrees_1_100k_b.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C999786F24AA429800131C15 /* londonTrees_1_100k_b.geojson */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,7 @@
 		C999785424A649FC00131C15 /* Black Locust.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Black Locust.jpg"; sourceTree = "<group>"; };
 		C999785524A649FC00131C15 /* Hazelnut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hazelnut.jpg; sourceTree = "<group>"; };
 		C999785624A649FC00131C15 /* Pear.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Pear.jpg; sourceTree = "<group>"; };
+		C999786F24AA429800131C15 /* londonTrees_1_100k_b.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = londonTrees_1_100k_b.geojson; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				C98524A12445B8450047BF66 /* Assets.xcassets */,
 				C940420A24473C5100A1212C /* londonTreesS.geojson */,
 				C940420E2448958100A1212C /* londonTrees_1_100k.geojson */,
+				C999786F24AA429800131C15 /* londonTrees_1_100k_b.geojson */,
 				C999783824A6466600131C15 /* close_icon2x.png */,
 				C999783624A6466600131C15 /* info_icon2x.png */,
 				C999783724A6466600131C15 /* location_icon2x.png */,
@@ -290,6 +293,7 @@
 				C999786424A649FC00131C15 /* Chesnut.jpg in Resources */,
 				C999786D24A649FC00131C15 /* Hazelnut.jpg in Resources */,
 				C999783B24A6466700131C15 /* close_icon2x.png in Resources */,
+				C999787024AA429800131C15 /* londonTrees_1_100k_b.geojson in Resources */,
 				C999786624A649FC00131C15 /* Cherry.jpg in Resources */,
 				C98AA28724913618003AAFF2 /* InfoPanelController.xib in Resources */,
 				C999786524A649FC00131C15 /* Elm.jpg in Resources */,
