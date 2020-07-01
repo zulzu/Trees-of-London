@@ -85,7 +85,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
           MKMapView.CameraBoundary(coordinateRegion: region),
           animated: true)
         
-        let zoomRange = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: 12000)
+        let zoomRange = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: 5000)
         mapView.setCameraZoomRange(zoomRange, animated: true)
 
         
@@ -98,8 +98,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     private func loadInitialData() {
       // 1
       guard
-        let fileName = Bundle.main.url(forResource: "londonTrees_1_100k", withExtension: "geojson"),
-//        let fileName = Bundle.main.url(forResource: "londonTrees_FullS2_500k", withExtension: "geojson"),
+        let fileName = Bundle.main.url(forResource: "londonTrees_Final", withExtension: "geojson"),
         let treeData = try? Data(contentsOf: fileName)
         else {
           return
@@ -111,9 +110,9 @@ class ViewController: UIViewController, MKMapViewDelegate {
           .decode(treeData)
           .compactMap { $0 as? MKGeoJSONFeature }
         // 3
-        let validWorks = features.compactMap(Trees.init)
+        let allTrees = features.compactMap(Trees.init)
         // 4
-        trees.append(contentsOf: validWorks)
+        trees.append(contentsOf: allTrees)
       } catch {
         // 5
         print("Unexpected error: \(error).")
@@ -144,7 +143,7 @@ extension ViewController: CLLocationManagerDelegate {
       
       let location = locations.last! as CLLocation
       let currentLocation = location.coordinate
-      let coordinateRegion = MKCoordinateRegion(center: currentLocation, latitudinalMeters: 800, longitudinalMeters: 800)
+      let coordinateRegion = MKCoordinateRegion(center: currentLocation, latitudinalMeters: 500, longitudinalMeters: 500)
       mapView.setRegion(coordinateRegion, animated: true)
       locationManager.stopUpdatingLocation()
    }

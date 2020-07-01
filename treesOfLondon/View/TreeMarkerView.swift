@@ -54,9 +54,20 @@ class TreeMarkerView: MKMarkerAnnotationView {
 //        detailLabel.text = treeIcon.title
 //        leftCalloutAccessoryView = mainTitle
         
+
         treeIcon.title = treeIcon.realTreeName
+        
+        
+//        let titleString = treeIcon.realTreeName
+//
+//        let mainTitle = NSMutableAttributedString(string: titleString)
+//        mainTitle.addAttribute(NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: 20.0), range: NSMakeRange(0, titleString.count))
                 
+
+        
+        
         clusteringIdentifier = String(describing: ClusterView.self)
+         
     }
   }
 }
