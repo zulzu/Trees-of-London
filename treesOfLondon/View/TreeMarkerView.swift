@@ -11,65 +11,42 @@ import MapKit
 
 
 class TreeMarkerView: MKMarkerAnnotationView {
-  override var annotation: MKAnnotation? {
-    willSet {
-
-        
-      guard let treeIcon = newValue as? Trees else {
-        return
-      }
-                
-      canShowCallout = true
-      calloutOffset = CGPoint(x: -5, y: 5)
-      rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-        
-        let treeImage = UIButton(frame: CGRect(
-          origin: CGPoint.zero,
-          size: CGSize(width: 80, height: 80)))
-                
-        //        treeImage.setBackgroundImage(#imageLiteral(resourceName: "Plane.jpg"), for: .normal)
-
-        let treeIconCase = UIImage(named: "\(treeIcon.realTreeName).jpg")
-        treeImage.setBackgroundImage(treeIconCase, for: .normal)
-        rightCalloutAccessoryView = treeImage
-                
-        let detailLabel = UILabel()
-        detailLabel.numberOfLines = 0
-        detailLabel.font = detailLabel.font.withSize(12)
-//        detailLabel.font = detailLabel.attributedText
-        detailLabel.text = treeIcon.subtitle
-        detailCalloutAccessoryView = detailLabel
-        
-//      markerTintColor = treeIcon.markerTintColor
-//      if let letter = treeIcon.discipline?.first {
-//        glyphText = String(letter)
-//      }
-        markerTintColor = treeIcon.markerTintColor
-        if let letter = treeIcon.realTreeName.first {
-          glyphText = String(letter)
+    override var annotation: MKAnnotation? {
+        willSet {
+            
+            guard let treeIcon = newValue as? Trees else {
+                return
+            }
+            
+            canShowCallout = true
+            calloutOffset = CGPoint(x: -5, y: 5)
+            rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+            
+            let treeImage = UIButton(frame: CGRect(
+                origin: CGPoint.zero,
+                size: CGSize(width: 80, height: 80)))
+            
+            let treeIconCase = UIImage(named: "\(treeIcon.realTreeName).jpg")
+            treeImage.setBackgroundImage(treeIconCase, for: .normal)
+            rightCalloutAccessoryView = treeImage
+            
+            let detailLabel = UILabel()
+            detailLabel.numberOfLines = 0
+            detailLabel.font = detailLabel.font.withSize(12)
+            detailLabel.text = treeIcon.subtitle
+            detailCalloutAccessoryView = detailLabel
+            
+            markerTintColor = treeIcon.markerTintColor
+            if let letter = treeIcon.realTreeName.first {
+                glyphText = String(letter)
+            }
+            
+            treeIcon.title = treeIcon.realTreeName
+            
+            clusteringIdentifier = String(describing: ClusterView.self)
+            
         }
-        
-//        let mainTitle = UILabel()
-//        mainTitle.numberOfLines = 0
-//        detailLabel.text = treeIcon.title
-//        leftCalloutAccessoryView = mainTitle
-        
-
-        treeIcon.title = treeIcon.realTreeName
-        
-        
-//        let titleString = treeIcon.realTreeName
-//
-//        let mainTitle = NSMutableAttributedString(string: titleString)
-//        mainTitle.addAttribute(NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: 20.0), range: NSMakeRange(0, titleString.count))
-                
-
-        
-        
-        clusteringIdentifier = String(describing: ClusterView.self)
-         
     }
-  }
 }
 
 
