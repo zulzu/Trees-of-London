@@ -10,8 +10,6 @@ import UIKit
 import MapKit
 import CoreLocation
 
-
-
 class ViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet private var mapView: MKMapView!
@@ -29,13 +27,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var locationButton: UIButton!
     @IBOutlet weak var infoButton: UIButton!
     
-    
     fileprivate let locationManager: CLLocationManager = {
         let manager = CLLocationManager()
         manager.requestWhenInUseAuthorization()
         return manager
     }()
-    
     
     func setUpMapView() {
         mapView.showsUserLocation = true
@@ -55,19 +51,36 @@ class ViewController: UIViewController, MKMapViewDelegate {
         locationManager.startUpdatingLocation()
     }
     
+    private func registerAnnotationViewClasses() {
+        mapView.register(TreeMarkerView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        mapView.register(ClusterView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier)
+    }
+    
+    private func loadInitialData() {
+        guard
+            let fileName = Bundle.main.url(forResource: "londonTrees_Final", withExtension: "geojson"),
+            let treeData = try? Data(contentsOf: fileName)
+            else {
+                return
+        }
+        do {
+            let features = try MKGeoJSONDecoder()
+                .decode(treeData)
+                .compactMap { $0 as? MKGeoJSONFeature }
+            let allTrees = features.compactMap(Trees.init)
+            trees.append(contentsOf: allTrees)
+        } catch {
+            print("Unexpected error: \(error).")
+        }
+    }
+    
     private var trees: [Trees] = []
+    
+    //MARK: - ViewDidLoad
     
     override func viewDidLoad() {
         
-        locationButton.buttonShadow()
-        infoButton.buttonShadow()
-        
         super.viewDidLoad()
-        
-        mapView.register(
-            TreeMarkerView.self,
-            forAnnotationViewWithReuseIdentifier:
-            MKMapViewDefaultAnnotationViewReuseIdentifier)
         
         // Set initial location in London
         let initialLocation = CLLocation(latitude: 51.501122, longitude: -0.146041)
@@ -85,30 +98,13 @@ class ViewController: UIViewController, MKMapViewDelegate {
         let zoomRange = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: 5000)
         mapView.setCameraZoomRange(zoomRange, animated: true)
         
-        
+        locationButton.buttonShadow()
+        infoButton.buttonShadow()
         loadInitialData()
+        registerAnnotationViewClasses()
         mapView.addAnnotations(trees)
         setUpMapView()
         
-    }
-    
-    private func loadInitialData() {
-        guard
-            let fileName = Bundle.main.url(forResource: "londonTrees_Final", withExtension: "geojson"),
-            let treeData = try? Data(contentsOf: fileName)
-            else {
-                return
-        }
-        
-        do {
-            let features = try MKGeoJSONDecoder()
-                .decode(treeData)
-                .compactMap { $0 as? MKGeoJSONFeature }
-            let allTrees = features.compactMap(Trees.init)
-            trees.append(contentsOf: allTrees)
-        } catch {
-            print("Unexpected error: \(error).")
-        }
     }
 }
 

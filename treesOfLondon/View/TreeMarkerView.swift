@@ -9,8 +9,8 @@
 import Foundation
 import MapKit
 
-
 class TreeMarkerView: MKMarkerAnnotationView {
+    
     override var annotation: MKAnnotation? {
         willSet {
             
@@ -43,7 +43,7 @@ class TreeMarkerView: MKMarkerAnnotationView {
             
             treeIcon.title = treeIcon.realTreeName
             
-            clusteringIdentifier = String(describing: ClusterView.self)
+            clusteringIdentifier = "tree"
             
         }
     }

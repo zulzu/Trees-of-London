@@ -10,10 +10,7 @@ import Foundation
 import MapKit
 
 class Trees: NSObject, MKAnnotation {
-//    var title: String?
-//    let locationName: String?
-//    let discipline: String?
-//    let coordinate: CLLocationCoordinate2D
+
     var title: String?
     let treeName: String?
     let fullLatinName: String?
@@ -34,7 +31,7 @@ class Trees: NSObject, MKAnnotation {
     }
     
     init?(feature: MKGeoJSONFeature) {
-        // 1
+        
         guard
             let point = feature.geometry.first as? MKPointAnnotation,
             let propertiesData = feature.properties,
@@ -44,7 +41,6 @@ class Trees: NSObject, MKAnnotation {
                 return nil
         }
         
-        // 3
         title = properties["nm3"] as? String
         treeName = properties["nm3"] as? String
         fullLatinName = properties["nm1"] as? String
@@ -52,12 +48,8 @@ class Trees: NSObject, MKAnnotation {
         super.init()
     }
     
-//    var subtitle: String? {
-//        return "\n" + "\n" + locationName! + "\n" + "\n" // + treeTestText
-//    }
-    
     var subtitle: String? {
-        return latinName + "\n" + "\n" // + treeTestText
+        return latinName + "\n" + "\n" 
     }
     
     var latinName: String {
@@ -68,7 +60,6 @@ class Trees: NSObject, MKAnnotation {
         }
     }
     
-
     var realTreeName: String {
         
         switch treeName {
@@ -122,8 +113,6 @@ class Trees: NSObject, MKAnnotation {
             return "Unknown"
         }
     }
-    
-    
     
     var markerTintColor: UIColor  {
         switch treeName {
