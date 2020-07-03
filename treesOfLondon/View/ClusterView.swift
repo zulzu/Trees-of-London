@@ -24,6 +24,8 @@ internal final class ClusterView: MKAnnotationView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("\(#function) not implemented.")
     }
+    
+    
 }
 
 //  MARK: Configuration

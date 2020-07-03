@@ -111,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				C98524982445B8440047BF66 /* AppDelegate.swift */,
+				C985249A2445B8440047BF66 /* SceneDelegate.swift */,
+				C9513B142497E5D800786B6B /* Extensions.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -139,7 +141,6 @@
 				C985249E2445B8440047BF66 /* Main.storyboard */,
 				C98AA28424913618003AAFF2 /* InfoPanelController.swift */,
 				C98AA28524913618003AAFF2 /* InfoPanelController.xib */,
-				C9513B142497E5D800786B6B /* Extensions.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -175,7 +176,6 @@
 				C97F95A7245B31DE00932DDE /* Core */,
 				C97F95AA245B325800932DDE /* Model */,
 				C97F95A9245B323600932DDE /* View */,
-				C985249A2445B8440047BF66 /* SceneDelegate.swift */,
 				C98524A62445B8450047BF66 /* Info.plist */,
 			);
 			path = treesOfLondon;

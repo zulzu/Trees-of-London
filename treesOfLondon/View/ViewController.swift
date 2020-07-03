@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ViewController: UIViewController, MKMapViewDelegate {
+class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     @IBOutlet private var mapView: MKMapView!
     
@@ -43,6 +43,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     func currentLocation() {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
+
         if #available(iOS 11.0, *) {
             locationManager.showsBackgroundLocationIndicator = true
         } else {
@@ -80,12 +81,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         
-        super.viewDidLoad()
-        
-        // Set initial location in London
-        let initialLocation = CLLocation(latitude: 51.501122, longitude: -0.146041)
-        mapView.centerToLocation(initialLocation)
-        
         let londonCenter = CLLocation(latitude: 51.5, longitude: 0.0)
         let region = MKCoordinateRegion(
             center: londonCenter.coordinate,
@@ -95,41 +90,33 @@ class ViewController: UIViewController, MKMapViewDelegate {
             MKMapView.CameraBoundary(coordinateRegion: region),
             animated: true)
         
-        let zoomRange = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: 5000)
+        let zoomRange = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: 1000)
         mapView.setCameraZoomRange(zoomRange, animated: true)
+        
+        super.viewDidLoad()
         
         locationButton.buttonShadow()
         infoButton.buttonShadow()
-        loadInitialData()
-        registerAnnotationViewClasses()
-        mapView.addAnnotations(trees)
         setUpMapView()
+
+        let seconds = 2.0
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+            self.loadInitialData()
+            self.registerAnnotationViewClasses()
+            self.mapView.addAnnotations(self.trees)
+        }
         
     }
 }
 
 //MARK: - Extensions
 
-private extension MKMapView {
-    func centerToLocation(
-        _ location: CLLocation,
-        regionRadius: CLLocationDistance = 1000
-    ) {
-        let coordinateRegion = MKCoordinateRegion(
-            center: location.coordinate,
-            latitudinalMeters: regionRadius,
-            longitudinalMeters: regionRadius)
-        setRegion(coordinateRegion, animated: true)
-    }
-    
-}
-
-extension ViewController: CLLocationManagerDelegate {
+extension ViewController {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         let location = locations.last! as CLLocation
         let currentLocation = location.coordinate
-        let coordinateRegion = MKCoordinateRegion(center: currentLocation, latitudinalMeters: 500, longitudinalMeters: 500)
+        let coordinateRegion = MKCoordinateRegion(center: currentLocation, latitudinalMeters: 75, longitudinalMeters: 75)
         mapView.setRegion(coordinateRegion, animated: true)
         locationManager.stopUpdatingLocation()
     }
@@ -137,5 +124,3 @@ extension ViewController: CLLocationManagerDelegate {
         print(error.localizedDescription)
     }
 }
-
-
