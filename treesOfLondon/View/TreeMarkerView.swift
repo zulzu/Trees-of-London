@@ -13,40 +13,34 @@ class TreeMarkerView: MKMarkerAnnotationView {
     
     override var annotation: MKAnnotation? {
         willSet {
-            
-            guard let treeIcon = newValue as? Trees else {
+            guard let treeAnnotation = newValue as? Trees else {
                 return
             }
             
+            markerTintColor = treeAnnotation.markerTintColor
             canShowCallout = true
-            calloutOffset = CGPoint(x: -5, y: 5)
-            rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+            
+            if let letter = treeAnnotation.realTreeName.first {
+                glyphText = String(letter)
+            }
+            
+            treeAnnotation.title = treeAnnotation.realTreeName
             
             let treeImage = UIButton(frame: CGRect(
-                origin: CGPoint.zero,
-                size: CGSize(width: 80, height: 80)))
-            
-            let treeIconCase = UIImage(named: "\(treeIcon.realTreeName).jpg")
+                                        origin: CGPoint.zero,
+                                        size: kUI.IconSize.largeSquare))
+            let treeIconCase = UIImage(named: "\(treeAnnotation.realTreeName).jpg")
             treeImage.setBackgroundImage(treeIconCase, for: .normal)
+            rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
             rightCalloutAccessoryView = treeImage
             
             let detailLabel = UILabel()
             detailLabel.numberOfLines = 0
-            detailLabel.font = detailLabel.font.withSize(12)
-            detailLabel.text = treeIcon.subtitle
+            detailLabel.font = detailLabel.font.withSize(kUI.Size.smallFont)
+            detailLabel.text = treeAnnotation.subtitle
             detailCalloutAccessoryView = detailLabel
             
-            markerTintColor = treeIcon.markerTintColor
-            if let letter = treeIcon.realTreeName.first {
-                glyphText = String(letter)
-            }
-            
-            treeIcon.title = treeIcon.realTreeName
-            
-            clusteringIdentifier = "tree"
-            
+            clusteringIdentifier = String(describing: ClusterView.self)
         }
     }
 }
-
-

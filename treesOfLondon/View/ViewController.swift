@@ -10,76 +10,48 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class ViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet private var mapView: MKMapView!
     
-    @IBAction func infoBtnPressed(_ sender: UIButton) {
+    @IBAction private func infoBtnPressed(_ sender: UIButton) {
         let infoPanel = InfoPanelController()
-        infoPanel.modalPresentationStyle = .custom
+        infoPanel.modalPresentationStyle = .fullScreen
         present(infoPanel, animated: true, completion: nil)
     }
     
-    @IBAction func locationBtnPressed(_ sender: UIButton) {
+    @IBAction private func locationBtnPressed(_ sender: UIButton) {
         currentLocation()
     }
     
-    @IBOutlet weak var locationButton: UIButton!
-    @IBOutlet weak var infoButton: UIButton!
+    @IBOutlet private weak var locationButton: UIButton!
+    @IBOutlet private weak var infoButton: UIButton!
     
+    private var trees: [Trees] = []
+
     fileprivate let locationManager: CLLocationManager = {
         let manager = CLLocationManager()
         manager.requestWhenInUseAuthorization()
         return manager
     }()
     
-    func setUpMapView() {
-        mapView.showsUserLocation = true
-        mapView.showsCompass = true
-        mapView.showsScale = true
-        currentLocation()
-    }
-    
-    func currentLocation() {
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-
-        if #available(iOS 11.0, *) {
-            locationManager.showsBackgroundLocationIndicator = true
-        } else {
-            // if needed
-        }
-        locationManager.startUpdatingLocation()
-    }
-    
-    private func registerAnnotationViewClasses() {
-        mapView.register(TreeMarkerView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
-        mapView.register(ClusterView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier)
-    }
-    
-    private func loadInitialData() {
-        guard
-            let fileName = Bundle.main.url(forResource: "londonTrees_Final", withExtension: "geojson"),
-            let treeData = try? Data(contentsOf: fileName)
-            else {
-                return
-        }
-        do {
-            let features = try MKGeoJSONDecoder()
-                .decode(treeData)
-                .compactMap { $0 as? MKGeoJSONFeature }
-            let allTrees = features.compactMap(Trees.init)
-            trees.append(contentsOf: allTrees)
-        } catch {
-            print("Unexpected error: \(error).")
-        }
-    }
-    
-    private var trees: [Trees] = []
-    
-    //MARK: - ViewDidLoad
-    
     override func viewDidLoad() {
+        
+        locationButton.buttonShadow()
+        infoButton.buttonShadow()
+        
+        //        mapView.delegate = self
+        
+        super.viewDidLoad()
+        
+        mapView.register(
+            TreeMarkerView.self,
+            forAnnotationViewWithReuseIdentifier:
+                MKMapViewDefaultAnnotationViewReuseIdentifier)
+        
+        // Set initial location in London
+        let initialLocation = CLLocation(latitude: 51.501122, longitude: -0.146041)
+        mapView.centerToLocation(initialLocation)
         
         let londonCenter = CLLocation(latitude: 51.5, longitude: 0.0)
         let region = MKCoordinateRegion(
@@ -90,33 +62,78 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             MKMapView.CameraBoundary(coordinateRegion: region),
             animated: true)
         
-        let zoomRange = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: 1000)
+        let zoomRange = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: 3000)
         mapView.setCameraZoomRange(zoomRange, animated: true)
         
-        super.viewDidLoad()
-        
-        locationButton.buttonShadow()
-        infoButton.buttonShadow()
+        loadInitialData()
+        mapView.addAnnotations(trees)
         setUpMapView()
-
-        let seconds = 2.0
-        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-            self.loadInitialData()
-            self.registerAnnotationViewClasses()
-            self.mapView.addAnnotations(self.trees)
+    }
+    
+    private func setUpMapView() {
+        mapView.showsUserLocation = true
+        mapView.showsCompass = true
+        mapView.showsScale = true
+        currentLocation()
+    }
+    
+    private func currentLocation() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        if #available(iOS 11.0, *) {
+            locationManager.showsBackgroundLocationIndicator = true
+        } else {
+            // Fallback on earlier versions
+        }
+        locationManager.startUpdatingLocation()
+    }
+    
+    private func loadInitialData() {
+        // 1
+        guard
+            let fileName = Bundle.main.url(forResource: "londonTrees_Final", withExtension: "geojson"),
+            let treeData = try? Data(contentsOf: fileName)
+        else {
+            return
         }
         
+        do {
+            // 2
+            let features = try MKGeoJSONDecoder()
+                .decode(treeData)
+                .compactMap { $0 as? MKGeoJSONFeature }
+            // 3
+            let allTrees = features.compactMap(Trees.init)
+            // 4
+            trees.append(contentsOf: allTrees)
+        } catch {
+            // 5
+            print("Unexpected error: \(error).")
+        }
     }
 }
 
 //MARK: - Extensions
 
-extension ViewController {
+private extension MKMapView {
+    func centerToLocation(
+        _ location: CLLocation,
+        regionRadius: CLLocationDistance = 1000
+    ) {
+        let coordinateRegion = MKCoordinateRegion(
+            center: location.coordinate,
+            latitudinalMeters: regionRadius,
+            longitudinalMeters: regionRadius)
+        setRegion(coordinateRegion, animated: true)
+    }
+}
+
+extension ViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         let location = locations.last! as CLLocation
         let currentLocation = location.coordinate
-        let coordinateRegion = MKCoordinateRegion(center: currentLocation, latitudinalMeters: 75, longitudinalMeters: 75)
+        let coordinateRegion = MKCoordinateRegion(center: currentLocation, latitudinalMeters: 500, longitudinalMeters: 500)
         mapView.setRegion(coordinateRegion, animated: true)
         locationManager.stopUpdatingLocation()
     }

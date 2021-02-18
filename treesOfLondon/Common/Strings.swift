@@ -7,3 +7,53 @@
 //
 
 import Foundation
+
+/// A key for retrieving a String that can be displayed to the user
+enum StringKey: String, CaseIterable {
+    
+    /// The word "Back"
+    case back
+    /// The word "Home"
+    case home
+    /// A generic error message
+    case errorMsg
+    /// The "About London trees" label on the info panel
+    case about
+    /// The main text on the info panel
+    case infoText
+    /// The "London Datastore" label
+    case londonDatastore
+    /// The link for the datastore
+    case datastoreLink
+}
+
+extension String {
+    
+    /// Retrieves any non-database stored strings for the app.
+    /// - Parameter stringKey: An instance of StringKey
+    /// - Returns: A String
+    static func getString(_ stringKey: StringKey) -> String {
+        guard let string = StringProvider.strings[stringKey] else {
+            assertionFailure("A String could not be retreived for StringKey: '\(stringKey.rawValue)'")
+            return "MISSING TEXT"
+        }
+        return string
+    }
+}
+
+fileprivate struct StringProvider {
+    
+    /// A dictionary containing all the static strings for the app
+    static var strings: [StringKey: String] {
+        [
+            .back: "Back",
+            .home: "Home",
+            .errorMsg: "Error, could't retrieve data",
+            .about: "About\nLONDON TREES",
+            .infoText: "This map visually presents trees in London using a public database available on the London Datastore website.\n \nIt shows the locations and species for over 700,000 street trees. Overall it has 22 species plus a collective group - ‘Other’ - for less common trees. Latin names and photos of leaves also included to help visual identification.\n \nIt’s estimated that there are over eight million trees in London, so this map is only a partial illustration.\n \nThe data was collected in 2014-15 by 25 London boroughs, the City of London and Transport for London. (Data wasn’t provided by 7 other boroughs.)\n \nResource:",
+            .londonDatastore: "London Datastore",
+            .datastoreLink: "https://data.london.gov.uk/dataset/local-authority-maintained-trees",
+            
+        ]
+    }
+}

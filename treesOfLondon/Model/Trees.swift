@@ -115,6 +115,7 @@ class Trees: NSObject, MKAnnotation {
     }
     
     var markerTintColor: UIColor  {
+        
         switch treeName {
         case "T01":
             return .init(red: 180/255, green: 218/255, blue: 0/255, alpha: 1.0)
@@ -166,7 +167,5 @@ class Trees: NSObject, MKAnnotation {
             return .init(red: 17/255, green: 197/255, blue: 178/255, alpha: 1.0)
         }
     }
-    
-    
 }
 

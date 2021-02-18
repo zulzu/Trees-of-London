@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C9513B152497E5D800786B6B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9513B142497E5D800786B6B /* Extensions.swift */; };
 		C97F95A6245B31C900932DDE /* TreeMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F95A5245B31C900932DDE /* TreeMarkerView.swift */; };
 		C98524992445B8440047BF66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98524982445B8440047BF66 /* AppDelegate.swift */; };
 		C985249B2445B8440047BF66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C985249A2445B8440047BF66 /* SceneDelegate.swift */; };
@@ -54,7 +53,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C9513B142497E5D800786B6B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C97F95A5245B31C900932DDE /* TreeMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeMarkerView.swift; sourceTree = "<group>"; };
 		C98524952445B8440047BF66 /* London Trees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "London Trees.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C98524982445B8440047BF66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 			children = (
 				C98524982445B8440047BF66 /* AppDelegate.swift */,
 				C985249A2445B8440047BF66 /* SceneDelegate.swift */,
-				C9513B142497E5D800786B6B /* Extensions.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -334,7 +331,6 @@
 				C9B6B90025DEE75900D125FF /* Strings.swift in Sources */,
 				C98524AF2445CC450047BF66 /* Trees.swift in Sources */,
 				C97F95A6245B31C900932DDE /* TreeMarkerView.swift in Sources */,
-				C9513B152497E5D800786B6B /* Extensions.swift in Sources */,
 				C98FFF092463285800C9B6F7 /* ClusterView.swift in Sources */,
 				C9B6B8FD25DEE74F00D125FF /* Extensions.swift in Sources */,
 				C98524992445B8440047BF66 /* AppDelegate.swift in Sources */,
