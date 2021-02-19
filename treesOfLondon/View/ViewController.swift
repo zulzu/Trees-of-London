@@ -21,14 +21,22 @@ class ViewController: UIViewController, MKMapViewDelegate {
     }
     
     @IBAction private func locationBtnPressed(_ sender: UIButton) {
-        currentLocation()
+        
+        updateLocationService()
+        
+        if checkLocationService() == LocationServiceStatus.authInUseAlways {
+            print("Location: \(String(describing: locationManager.location?.coordinate))")
+            let isUserInLondon: Bool = checkLocation(latitude: Double((locationManager.location?.coordinate.latitude ?? 0.1)), longitude: Double((locationManager.location?.coordinate.longitude ?? 0.1)))
+            print(("User is in London: \(isUserInLondon)"))
+            if isUserInLondon { currentLocation() }
+        }
     }
     
     @IBOutlet private weak var locationButton: UIButton!
     @IBOutlet private weak var infoButton: UIButton!
     
     private var trees: [Trees] = []
-
+    
     fileprivate let locationManager: CLLocationManager = {
         let manager = CLLocationManager()
         manager.requestWhenInUseAuthorization()
@@ -36,9 +44,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
     }()
     
     override func viewDidLoad() {
-        
-        locationButton.buttonShadow()
-        infoButton.buttonShadow()
         
         //        mapView.delegate = self
         
@@ -50,10 +55,10 @@ class ViewController: UIViewController, MKMapViewDelegate {
                 MKMapViewDefaultAnnotationViewReuseIdentifier)
         
         // Set initial location in London
-        let initialLocation = CLLocation(latitude: 51.501122, longitude: -0.146041)
-        mapView.centerToLocation(initialLocation)
+        //        let initialLocation = CLLocation(latitude: 51.501122, longitude: -0.146041)
+        let londonCenter = CLLocation(latitude: 51.5007, longitude: -0.1246)
         
-        let londonCenter = CLLocation(latitude: 51.5, longitude: 0.0)
+        mapView.centerToLocation(londonCenter)
         let region = MKCoordinateRegion(
             center: londonCenter.coordinate,
             latitudinalMeters: 60000,
@@ -65,6 +70,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
         let zoomRange = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: 3000)
         mapView.setCameraZoomRange(zoomRange, animated: true)
         
+        locationButton.buttonShadow()
+        infoButton.buttonShadow()
         loadInitialData()
         mapView.addAnnotations(trees)
         setUpMapView()
@@ -86,6 +93,15 @@ class ViewController: UIViewController, MKMapViewDelegate {
             // Fallback on earlier versions
         }
         locationManager.startUpdatingLocation()
+    }
+    
+    func checkLocation(latitude: Double, longitude: Double) -> Bool {
+        
+        if (latitude > 49 && latitude < 53) && (longitude > -1 && longitude < 3) {
+            return true
+        } else {
+            return false
+        }
     }
     
     private func loadInitialData() {
@@ -129,6 +145,7 @@ private extension MKMapView {
 }
 
 extension ViewController: CLLocationManagerDelegate {
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         let location = locations.last! as CLLocation
@@ -137,7 +154,72 @@ extension ViewController: CLLocationManagerDelegate {
         mapView.setRegion(coordinateRegion, animated: true)
         locationManager.stopUpdatingLocation()
     }
+    
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error.localizedDescription)
+    }
+
+    /// For checking the authorizationStatus of the CLLocationManager
+    /// - Returns: A LocationServiceStatus enum case
+    func checkLocationService() -> LocationServiceStatus {
+        /// Check if the app can use Location Services
+        if CLLocationManager.locationServicesEnabled() {
+            switch CLLocationManager.authorizationStatus() {
+            case .notDetermined:
+                return .notDetermined
+            case .restricted, .denied:
+                return .restrictedDenied
+            case .authorizedWhenInUse, .authorizedAlways:
+                return .authInUseAlways
+            @unknown default:
+                return .unknownDefault
+            }
+        } else {
+            return .unknownDefault
+        }
+    }
+    
+    /// For handling the different cases of the CLLocationManager's authorization statuses
+    /// Can request access to the location services or continue running if already has access
+    func updateLocationService() {
+        /// Check if user has authorized the app to use Location Services
+        if CLLocationManager.locationServicesEnabled() {
+            
+            switch checkLocationService() {
+            
+            case .notDetermined:
+                // Request using the location service
+                self.locationManager.delegate = self
+                locationManager.requestWhenInUseAuthorization()
+                break
+                
+            case .restrictedDenied:
+                // Creating an alert to use the location service
+                let alert = UIAlertController(title: "Allow Location Access", message: "London Trees needs access to your location. Turn on Location Services in your device settings.", preferredStyle: UIAlertController.Style.alert)
+
+                // Alert to Open Settings
+                alert.addAction(UIAlertAction(title: "Settings", style: UIAlertAction.Style.default, handler: { action in
+                    guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+                        return
+                    }
+                    if UIApplication.shared.canOpenURL(settingsUrl) {
+                        UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                            print("Settings opened: \(success)")
+                        })
+                    }
+                }))
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                break
+                
+            case .authInUseAlways:
+                // Enable features that require location services here.
+                print("Has access to location")
+                break
+                
+            case .unknownDefault:
+                fatalError()
+            }
+        }
     }
 }
