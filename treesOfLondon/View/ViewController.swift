@@ -55,19 +55,18 @@ class ViewController: UIViewController, MKMapViewDelegate {
                 MKMapViewDefaultAnnotationViewReuseIdentifier)
         
         // Set initial location in London
-        //        let initialLocation = CLLocation(latitude: 51.501122, longitude: -0.146041)
-        let londonCenter = CLLocation(latitude: 51.5007, longitude: -0.1246)
+        let defaultLocation = CLLocation(latitude: kLocations.defaultLocation.latitude, longitude: kLocations.defaultLocation.longitude)
         
-        mapView.centerToLocation(londonCenter)
+        mapView.centerToLocation(defaultLocation)
         let region = MKCoordinateRegion(
-            center: londonCenter.coordinate,
-            latitudinalMeters: 60000,
-            longitudinalMeters: 60000)
+            center: defaultLocation.coordinate,
+            latitudinalMeters: kUI.ZoomRange.maxDistance,
+            longitudinalMeters: kUI.ZoomRange.maxDistance)
         mapView.setCameraBoundary(
             MKMapView.CameraBoundary(coordinateRegion: region),
             animated: true)
         
-        let zoomRange = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: 3000)
+        let zoomRange = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: kUI.ZoomRange.large)
         mapView.setCameraZoomRange(zoomRange, animated: true)
         
         locationButton.buttonShadow()
@@ -97,7 +96,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     func checkLocation(latitude: Double, longitude: Double) -> Bool {
         
-        if (latitude > 49 && latitude < 53) && (longitude > -1 && longitude < 3) {
+        if (latitude > 51.35 && latitude < 51.7) && (longitude > -0.55 && longitude < 0.2) {
             return true
         } else {
             return false
@@ -134,7 +133,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
 private extension MKMapView {
     func centerToLocation(
         _ location: CLLocation,
-        regionRadius: CLLocationDistance = 1000
+        regionRadius: CLLocationDistance = kUI.ZoomRange.medium
     ) {
         let coordinateRegion = MKCoordinateRegion(
             center: location.coordinate,
@@ -150,7 +149,7 @@ extension ViewController: CLLocationManagerDelegate {
         
         let location = locations.last! as CLLocation
         let currentLocation = location.coordinate
-        let coordinateRegion = MKCoordinateRegion(center: currentLocation, latitudinalMeters: 500, longitudinalMeters: 500)
+        let coordinateRegion = MKCoordinateRegion(center: currentLocation, latitudinalMeters: kUI.ZoomRange.small, longitudinalMeters: kUI.ZoomRange.small)
         mapView.setRegion(coordinateRegion, animated: true)
         locationManager.stopUpdatingLocation()
     }
@@ -158,13 +157,15 @@ extension ViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error.localizedDescription)
     }
-
+    
     /// For checking the authorizationStatus of the CLLocationManager
     /// - Returns: A LocationServiceStatus enum case
     func checkLocationService() -> LocationServiceStatus {
         /// Check if the app can use Location Services
         if CLLocationManager.locationServicesEnabled() {
+            
             switch CLLocationManager.authorizationStatus() {
+            
             case .notDetermined:
                 return .notDetermined
             case .restricted, .denied:
@@ -195,10 +196,9 @@ extension ViewController: CLLocationManagerDelegate {
                 
             case .restrictedDenied:
                 // Creating an alert to use the location service
-                let alert = UIAlertController(title: "Allow Location Access", message: "London Trees needs access to your location. Turn on Location Services in your device settings.", preferredStyle: UIAlertController.Style.alert)
-
+                let alert = UIAlertController(title: String.getString(.locAccess), message: String.getString(.locAccessWarning), preferredStyle: UIAlertController.Style.alert)
                 // Alert to Open Settings
-                alert.addAction(UIAlertAction(title: "Settings", style: UIAlertAction.Style.default, handler: { action in
+                alert.addAction(UIAlertAction(title: String.getString(.settings), style: UIAlertAction.Style.default, handler: { action in
                     guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
                         return
                     }
@@ -208,7 +208,7 @@ extension ViewController: CLLocationManagerDelegate {
                         })
                     }
                 }))
-                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                alert.addAction(UIAlertAction(title: String.getString(.ok), style: UIAlertAction.Style.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
                 break
                 

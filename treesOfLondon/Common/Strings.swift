@@ -25,6 +25,14 @@ enum StringKey: String, CaseIterable {
     case londonDatastore
     /// The link for the datastore
     case datastoreLink
+    /// The word "Settings"
+    case settings
+    /// The label "Allow Location Access"
+    case locAccess
+    /// The message for requesting access for the location service
+    case locAccessWarning
+    /// The word "OK"
+    case ok
 }
 
 extension String {
@@ -53,6 +61,10 @@ fileprivate struct StringProvider {
             .infoText: "This map visually presents trees in London using a public database available on the London Datastore website.\n \nIt shows the locations and species for over 700,000 street trees. Overall it has 22 species plus a collective group - ‘Other’ - for less common trees. Latin names and photos of leaves also included to help visual identification.\n \nIt’s estimated that there are over eight million trees in London, so this map is only a partial illustration.\n \nThe data was collected in 2014-15 by 25 London boroughs, the City of London and Transport for London. (Data wasn’t provided by 7 other boroughs.)\n \nResource:",
             .londonDatastore: "London Datastore",
             .datastoreLink: "https://data.london.gov.uk/dataset/local-authority-maintained-trees",
+            .settings: "Settings",
+            .locAccess: "Allow Location Access",
+            .locAccessWarning: "London Trees needs access to your location. Turn on Location Services in your device settings.",
+            .ok: "OK",
             
         ]
     }
