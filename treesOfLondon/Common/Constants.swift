@@ -37,7 +37,7 @@ enum kUI {
         //// 18pt
         static let regular: CGFloat = 40
         /// 12pt
-        static let small: CGFloat = 20
+        static let small: CGFloat = 25
         /// 8pt
         static let extraSmall: CGFloat = 10
         /// 30pt
