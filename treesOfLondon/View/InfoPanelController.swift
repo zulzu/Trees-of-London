@@ -26,11 +26,11 @@ class InfoPanelController: UIViewController, UITextViewDelegate {
         
         // Setting up the title
         titleLabel.text = String.getString(.about)
-        titleLabel.textColor = UIColor(red: 124/255, green: 145/255, blue: 133/255, alpha: 1.0)
+        titleLabel.textColor = .textMainColour
         
         // Setting up the main text
         textLabel.text = String.getString(.infoText)
-        textLabel.textColor = UIColor(red: 57/255, green: 57/255, blue: 56/255, alpha: 1.0)
+        textLabel.textColor = .textMainColour
         
         // Setting up the link
         let linkText = String.getString(.londonDatastore)
