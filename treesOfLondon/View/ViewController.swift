@@ -45,8 +45,10 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         mapView.register(
             TreeMarkerView.self,
-            forAnnotationViewWithReuseIdentifier:
-                MKMapViewDefaultAnnotationViewReuseIdentifier)
+            forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        mapView.register(
+            ClusterView.self,
+            forAnnotationViewWithReuseIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier)
         
         // Set initial location, map boundary and the maximum zoom range
         mapView.centerToLocation(defaultLocation)
@@ -57,7 +59,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
         mapView.setCameraBoundary(
             MKMapView.CameraBoundary(coordinateRegion: region),
             animated: true)
-        let zoomRange = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: kUI.ZoomRange.large)
         mapView.setCameraZoomRange(zoomRange, animated: true)
         
         locationButton.buttonShadow()
@@ -145,7 +146,7 @@ private extension MKMapView {
     
     func centerToLocation(
         _ location: CLLocation,
-        regionRadius: CLLocationDistance = kUI.ZoomRange.medium
+        regionRadius: CLLocationDistance = kUI.ZoomRange.small
     ) {
         let coordinateRegion = MKCoordinateRegion(
             center: location.coordinate,

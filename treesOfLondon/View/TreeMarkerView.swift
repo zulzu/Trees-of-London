@@ -9,6 +9,7 @@
 import Foundation
 import MapKit
 
+/// The individual tree marker on the map. Has a callout with the name, the latin name and the leaf image.
 class TreeMarkerView: MKMarkerAnnotationView {
     
     override var annotation: MKAnnotation? {
