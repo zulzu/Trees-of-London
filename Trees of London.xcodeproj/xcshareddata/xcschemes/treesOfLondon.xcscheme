@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C98524942445B8440047BF66"
-               BuildableName = "London Trees.app"
-               BlueprintName = "London Trees"
-               ReferencedContainer = "container:London Trees.xcodeproj">
+               BuildableName = "Trees of London.app"
+               BlueprintName = "Trees of London"
+               ReferencedContainer = "container:Trees of London.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C98524942445B8440047BF66"
-            BuildableName = "London Trees.app"
-            BlueprintName = "London Trees"
-            ReferencedContainer = "container:London Trees.xcodeproj">
+            BuildableName = "Trees of London.app"
+            BlueprintName = "Trees of London"
+            ReferencedContainer = "container:Trees of London.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <LocationScenarioReference
@@ -68,9 +68,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C98524942445B8440047BF66"
-            BuildableName = "London Trees.app"
-            BlueprintName = "London Trees"
-            ReferencedContainer = "container:London Trees.xcodeproj">
+            BuildableName = "Trees of London.app"
+            BlueprintName = "Trees of London"
+            ReferencedContainer = "container:Trees of London.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

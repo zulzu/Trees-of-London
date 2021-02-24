@@ -56,7 +56,7 @@
 
 /* Begin PBXFileReference section */
 		C97F95A5245B31C900932DDE /* TreeMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeMarkerView.swift; sourceTree = "<group>"; };
-		C98524952445B8440047BF66 /* London Trees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "London Trees.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C98524952445B8440047BF66 /* Trees of London.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trees of London.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C98524982445B8440047BF66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C985249A2445B8440047BF66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C985249C2445B8440047BF66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 		C98524962445B8440047BF66 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C98524952445B8440047BF66 /* London Trees.app */,
+				C98524952445B8440047BF66 /* Trees of London.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,9 +179,9 @@
 		C98524972445B8440047BF66 /* treesOfLondon */ = {
 			isa = PBXGroup;
 			children = (
-				C9B6B8F725DEE72B00D125FF /* Common */,
-				C97F95A8245B31F700932DDE /* Resources */,
 				C97F95A7245B31DE00932DDE /* Core */,
+				C97F95A8245B31F700932DDE /* Resources */,
+				C9B6B8F725DEE72B00D125FF /* Common */,
 				C97F95AA245B325800932DDE /* Model */,
 				C97F95A9245B323600932DDE /* View */,
 				C98524A62445B8450047BF66 /* Info.plist */,
@@ -235,9 +235,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C98524942445B8440047BF66 /* London Trees */ = {
+		C98524942445B8440047BF66 /* Trees of London */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C98524A92445B8450047BF66 /* Build configuration list for PBXNativeTarget "London Trees" */;
+			buildConfigurationList = C98524A92445B8450047BF66 /* Build configuration list for PBXNativeTarget "Trees of London" */;
 			buildPhases = (
 				C98524912445B8440047BF66 /* Sources */,
 				C98524922445B8440047BF66 /* Frameworks */,
@@ -247,9 +247,9 @@
 			);
 			dependencies = (
 			);
-			name = "London Trees";
+			name = "Trees of London";
 			productName = treesOfLondon;
-			productReference = C98524952445B8440047BF66 /* London Trees.app */;
+			productReference = C98524952445B8440047BF66 /* Trees of London.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -267,7 +267,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C98524902445B8440047BF66 /* Build configuration list for PBXProject "London Trees" */;
+			buildConfigurationList = C98524902445B8440047BF66 /* Build configuration list for PBXProject "Trees of London" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -280,7 +280,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C98524942445B8440047BF66 /* London Trees */,
+				C98524942445B8440047BF66 /* Trees of London */,
 			);
 		};
 /* End PBXProject section */
@@ -529,7 +529,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C98524902445B8440047BF66 /* Build configuration list for PBXProject "London Trees" */ = {
+		C98524902445B8440047BF66 /* Build configuration list for PBXProject "Trees of London" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C98524A72445B8450047BF66 /* Debug */,
@@ -538,7 +538,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C98524A92445B8450047BF66 /* Build configuration list for PBXNativeTarget "London Trees" */ = {
+		C98524A92445B8450047BF66 /* Build configuration list for PBXNativeTarget "Trees of London" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C98524AA2445B8450047BF66 /* Debug */,
