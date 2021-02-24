@@ -19,10 +19,10 @@
 		C98AA28724913618003AAFF2 /* InfoPanelController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C98AA28524913618003AAFF2 /* InfoPanelController.xib */; };
 		C98FFF092463285800C9B6F7 /* ClusterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98FFF082463285800C9B6F7 /* ClusterView.swift */; };
 		C992D9E125E6C92F0081A961 /* londonTrees_Final.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C992D9E025E6C92F0081A961 /* londonTrees_Final.geojson */; };
+		C992D9E825E6F0A30081A961 /* londontrees_load_image3x.png.png in Resources */ = {isa = PBXBuildFile; fileRef = C992D9E725E6F0A30081A961 /* londontrees_load_image3x.png.png */; };
 		C999783924A6466700131C15 /* info_icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C999783624A6466600131C15 /* info_icon2x.png */; };
 		C999783A24A6466700131C15 /* location_icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C999783724A6466600131C15 /* location_icon2x.png */; };
 		C999783B24A6466700131C15 /* close_icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C999783824A6466600131C15 /* close_icon2x.png */; };
-		C999783D24A6469800131C15 /* londontrees_load_image3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C999783C24A6469800131C15 /* londontrees_load_image3x.png */; };
 		C999785724A649FC00131C15 /* Birch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999783F24A649FB00131C15 /* Birch.jpg */; };
 		C999785824A649FC00131C15 /* Pine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784024A649FB00131C15 /* Pine.jpg */; };
 		C999785924A649FC00131C15 /* Plane.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784124A649FB00131C15 /* Plane.jpg */; };
@@ -69,10 +69,10 @@
 		C98AA28524913618003AAFF2 /* InfoPanelController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoPanelController.xib; sourceTree = "<group>"; };
 		C98FFF082463285800C9B6F7 /* ClusterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterView.swift; sourceTree = "<group>"; };
 		C992D9E025E6C92F0081A961 /* londonTrees_Final.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = londonTrees_Final.geojson; path = "../../../../swift/_tree database/_original/londonTrees_Final.geojson"; sourceTree = "<group>"; };
+		C992D9E725E6F0A30081A961 /* londontrees_load_image3x.png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = londontrees_load_image3x.png.png; path = ../../../../../Downloads/londontrees_load_image3x.png.png; sourceTree = "<group>"; };
 		C999783624A6466600131C15 /* info_icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_icon2x.png; sourceTree = "<group>"; };
 		C999783724A6466600131C15 /* location_icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location_icon2x.png; sourceTree = "<group>"; };
 		C999783824A6466600131C15 /* close_icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close_icon2x.png; sourceTree = "<group>"; };
-		C999783C24A6469800131C15 /* londontrees_load_image3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = londontrees_load_image3x.png; sourceTree = "<group>"; };
 		C999783F24A649FB00131C15 /* Birch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Birch.jpg; sourceTree = "<group>"; };
 		C999784024A649FB00131C15 /* Pine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Pine.jpg; sourceTree = "<group>"; };
 		C999784124A649FB00131C15 /* Plane.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Plane.jpg; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 				C999783824A6466600131C15 /* close_icon2x.png */,
 				C999783624A6466600131C15 /* info_icon2x.png */,
 				C999783724A6466600131C15 /* location_icon2x.png */,
-				C999783C24A6469800131C15 /* londontrees_load_image3x.png */,
+				C992D9E725E6F0A30081A961 /* londontrees_load_image3x.png.png */,
 				C992D9E025E6C92F0081A961 /* londonTrees_Final.geojson */,
 			);
 			path = Resources;
@@ -290,7 +290,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C999783D24A6469800131C15 /* londontrees_load_image3x.png in Resources */,
 				C999785D24A649FC00131C15 /* Hornbeam.jpg in Resources */,
 				C999786324A649FC00131C15 /* Whitebeam.jpg in Resources */,
 				C999786224A649FC00131C15 /* Lime.jpg in Resources */,
@@ -299,6 +298,7 @@
 				C999785F24A649FC00131C15 /* Other.jpg in Resources */,
 				C98524A52445B8450047BF66 /* LaunchScreen.storyboard in Resources */,
 				C999786924A649FC00131C15 /* Cypress.jpg in Resources */,
+				C992D9E825E6F0A30081A961 /* londontrees_load_image3x.png.png in Resources */,
 				C999786124A649FC00131C15 /* Beech.jpg in Resources */,
 				C98524A22445B8450047BF66 /* Assets.xcassets in Resources */,
 				C999786A24A649FC00131C15 /* Ash.jpg in Resources */,
@@ -491,6 +491,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 7U8H9SK8NB;
 				INFOPLIST_FILE = treesOfLondon/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -498,7 +499,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.8;
+				MARKETING_VERSION = 0.81;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrasPal.treesOfLondon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -511,6 +512,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 7U8H9SK8NB;
 				INFOPLIST_FILE = treesOfLondon/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -518,7 +520,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.8;
+				MARKETING_VERSION = 0.81;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrasPal.treesOfLondon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

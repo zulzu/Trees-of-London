@@ -73,10 +73,12 @@ class ViewController: UIViewController, MKMapViewDelegate {
         loadingLabel.blink()
         
         loadInitialData { (data, error) in
-            if let retrievedData = data {
+            if data != nil {
+                
+                let dateNow = Date()
                 print("retrieved Data")
+                print("Dataloading finished: \(dateNow)")
                 self.loadingLabel.isHidden = true
-                self.trees = retrievedData
                 self.mapView.addAnnotations(self.trees)
             }
         }
@@ -130,8 +132,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
     }
     
     private func loadInitialData(completion: @escaping (_ data: [Trees]?, _ error: Error?) -> ()) {
+        
+        let date = Date()
+        
+        print("Dataloading started: \(date)")
                 
-        var treeInfos: [Trees] = []
         var receivedError: Error?
         
         DispatchQueue.global(qos: .background).async {
@@ -146,12 +151,13 @@ class ViewController: UIViewController, MKMapViewDelegate {
                     .decode(treeData)
                     .compactMap { $0 as? MKGeoJSONFeature }
                 let allTrees = features.compactMap(Trees.init)
-                treeInfos.append(contentsOf: allTrees)
+                self.trees.append(contentsOf: allTrees)
+
             } catch {
                 receivedError = error
             }
             DispatchQueue.main.async {
-                completion(treeInfos, receivedError)
+                completion(self.trees, receivedError)
             }
         }
     }
