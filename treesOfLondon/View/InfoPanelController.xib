@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InfoPanelController" customModule="London_Trees" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InfoPanelController" customModule="Trees_of_London" customModuleProvider="target">
             <connections>
                 <outlet property="linkLabel" destination="pXq-k1-DHz" id="OG4-E9-UFr"/>
                 <outlet property="textLabel" destination="Uqo-ni-2Gj" id="ykK-1K-86m"/>

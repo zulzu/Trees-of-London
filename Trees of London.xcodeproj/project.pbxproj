@@ -18,6 +18,7 @@
 		C98AA28624913618003AAFF2 /* InfoPanelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98AA28424913618003AAFF2 /* InfoPanelController.swift */; };
 		C98AA28724913618003AAFF2 /* InfoPanelController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C98AA28524913618003AAFF2 /* InfoPanelController.xib */; };
 		C98FFF092463285800C9B6F7 /* ClusterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98FFF082463285800C9B6F7 /* ClusterView.swift */; };
+		C992D9E125E6C92F0081A961 /* londonTrees_Final.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C992D9E025E6C92F0081A961 /* londonTrees_Final.geojson */; };
 		C999783924A6466700131C15 /* info_icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C999783624A6466600131C15 /* info_icon2x.png */; };
 		C999783A24A6466700131C15 /* location_icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C999783724A6466600131C15 /* location_icon2x.png */; };
 		C999783B24A6466700131C15 /* close_icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C999783824A6466600131C15 /* close_icon2x.png */; };
@@ -51,7 +52,6 @@
 		C9B6B90025DEE75900D125FF /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B6B8FF25DEE75900D125FF /* Strings.swift */; };
 		C9B6B90525E01DA600D125FF /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B6B90425E01DA600D125FF /* Enums.swift */; };
 		C9B6B90A25E42E2300D125FF /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B6B90925E42E2300D125FF /* Colours.swift */; };
-		C9FC53CC24ACF7BA008DA0C0 /* londonTrees_Final.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C9FC53CB24ACF7BA008DA0C0 /* londonTrees_Final.geojson */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +68,7 @@
 		C98AA28424913618003AAFF2 /* InfoPanelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPanelController.swift; sourceTree = "<group>"; };
 		C98AA28524913618003AAFF2 /* InfoPanelController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoPanelController.xib; sourceTree = "<group>"; };
 		C98FFF082463285800C9B6F7 /* ClusterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterView.swift; sourceTree = "<group>"; };
+		C992D9E025E6C92F0081A961 /* londonTrees_Final.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = londonTrees_Final.geojson; path = "../../../../swift/_tree database/_original/londonTrees_Final.geojson"; sourceTree = "<group>"; };
 		C999783624A6466600131C15 /* info_icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_icon2x.png; sourceTree = "<group>"; };
 		C999783724A6466600131C15 /* location_icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location_icon2x.png; sourceTree = "<group>"; };
 		C999783824A6466600131C15 /* close_icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close_icon2x.png; sourceTree = "<group>"; };
@@ -101,7 +102,6 @@
 		C9B6B8FF25DEE75900D125FF /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		C9B6B90425E01DA600D125FF /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		C9B6B90925E42E2300D125FF /* Colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
-		C9FC53CB24ACF7BA008DA0C0 /* londonTrees_Final.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = londonTrees_Final.geojson; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,11 +129,11 @@
 			children = (
 				C999783E24A649CF00131C15 /* treeImages */,
 				C98524A12445B8450047BF66 /* Assets.xcassets */,
-				C9FC53CB24ACF7BA008DA0C0 /* londonTrees_Final.geojson */,
 				C999783824A6466600131C15 /* close_icon2x.png */,
 				C999783624A6466600131C15 /* info_icon2x.png */,
 				C999783724A6466600131C15 /* location_icon2x.png */,
 				C999783C24A6469800131C15 /* londontrees_load_image3x.png */,
+				C992D9E025E6C92F0081A961 /* londonTrees_Final.geojson */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -304,7 +304,6 @@
 				C999786A24A649FC00131C15 /* Ash.jpg in Resources */,
 				C999785B24A649FC00131C15 /* Willow.jpg in Resources */,
 				C999786424A649FC00131C15 /* Chesnut.jpg in Resources */,
-				C9FC53CC24ACF7BA008DA0C0 /* londonTrees_Final.geojson in Resources */,
 				C999786D24A649FC00131C15 /* Hazelnut.jpg in Resources */,
 				C999783B24A6466700131C15 /* close_icon2x.png in Resources */,
 				C999786624A649FC00131C15 /* Cherry.jpg in Resources */,
@@ -323,6 +322,7 @@
 				C999785A24A649FC00131C15 /* Maple.jpg in Resources */,
 				C999786724A649FC00131C15 /* Hawthorn.jpg in Resources */,
 				C999786024A649FC00131C15 /* Poplar.jpg in Resources */,
+				C992D9E125E6C92F0081A961 /* londonTrees_Final.geojson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

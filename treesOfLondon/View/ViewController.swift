@@ -25,6 +25,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
         setLocationOnMap()
     }
     
+    @IBOutlet weak var loadingLabel: UILabel!
+    
     @IBOutlet private weak var locationButton: UIButton!
     @IBOutlet private weak var infoButton: UIButton!
     
@@ -63,9 +65,21 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         locationButton.buttonShadow()
         infoButton.buttonShadow()
-        loadInitialData()
-        mapView.addAnnotations(trees)
+        
         setUpMapView()
+        
+        loadingLabel.text = String.getString(.loadingData)
+        loadingLabel.textColor = .linkColour
+        loadingLabel.blink()
+        
+        loadInitialData { (data, error) in
+            if let retrievedData = data {
+                print("retrieved Data")
+                self.loadingLabel.isHidden = true
+                self.trees = retrievedData
+                self.mapView.addAnnotations(self.trees)
+            }
+        }
     }
     
     private func setUpMapView() {
@@ -115,27 +129,30 @@ class ViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
-    private func loadInitialData() {
-        // 1
-        guard
-            let fileName = Bundle.main.url(forResource: "londonTrees_Final", withExtension: "geojson"),
-            let treeData = try? Data(contentsOf: fileName)
-        else {
-            return
-        }
+    private func loadInitialData(completion: @escaping (_ data: [Trees]?, _ error: Error?) -> ()) {
+                
+        var treeInfos: [Trees] = []
+        var receivedError: Error?
         
-        do {
-            // 2
-            let features = try MKGeoJSONDecoder()
-                .decode(treeData)
-                .compactMap { $0 as? MKGeoJSONFeature }
-            // 3
-            let allTrees = features.compactMap(Trees.init)
-            // 4
-            trees.append(contentsOf: allTrees)
-        } catch {
-            // 5
-            print("Unexpected error: \(error).")
+        DispatchQueue.global(qos: .background).async {
+            guard
+                let fileName = Bundle.main.url(forResource: "londonTrees_Final", withExtension: "geojson"),
+                let treeData = try? Data(contentsOf: fileName)
+            else {
+                return
+            }
+            do {
+                let features = try MKGeoJSONDecoder()
+                    .decode(treeData)
+                    .compactMap { $0 as? MKGeoJSONFeature }
+                let allTrees = features.compactMap(Trees.init)
+                treeInfos.append(contentsOf: allTrees)
+            } catch {
+                receivedError = error
+            }
+            DispatchQueue.main.async {
+                completion(treeInfos, receivedError)
+            }
         }
     }
 }
