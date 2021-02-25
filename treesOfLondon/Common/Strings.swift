@@ -67,7 +67,7 @@ fileprivate struct StringProvider {
             .locAccess: "Allow Location Access",
             .locAccessWarning: "Trees of London needs access to your location. Turn on Location Services in your device settings. When location is not available or you are not in London, the application will use a default location.",
             .ok: "OK",
-            .loadingData: "Loading data\nThis can take a lot of time...\n\nSo many trees...",
+            .loadingData: "Loading data\nThis can take a few seconds...",
             
         ]
     }

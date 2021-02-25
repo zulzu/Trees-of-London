@@ -74,10 +74,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         loadInitialData { (data, error) in
             if data != nil {
-                
-                let dateNow = Date()
-                print("retrieved Data")
-                print("Dataloading finished: \(dateNow)")
+//                let dateNow = Date()
+//                print("Dataloading finished: \(dateNow)")
                 self.loadingLabel.isHidden = true
                 self.mapView.addAnnotations(self.trees)
             }
@@ -133,13 +131,12 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     private func loadInitialData(completion: @escaping (_ data: [Trees]?, _ error: Error?) -> ()) {
         
-        let date = Date()
-        
-        print("Dataloading started: \(date)")
+//        let date = Date()
+//        print("Dataloading started: \(date)")
                 
         var receivedError: Error?
         
-        DispatchQueue.global(qos: .background).async {
+        DispatchQueue.global(qos: .userInteractive).async {
             guard
                 let fileName = Bundle.main.url(forResource: "londonTrees_Final", withExtension: "geojson"),
                 let treeData = try? Data(contentsOf: fileName)
