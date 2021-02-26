@@ -75,7 +75,7 @@ enum kUI {
     enum ZoomRange {
         static let small: Double = 500
         static let medium: Double = 1000
-        static let large: Double = 3000
+        static let large: Double = 2000
         static let maxDistance: Double = 60000
     }
 }

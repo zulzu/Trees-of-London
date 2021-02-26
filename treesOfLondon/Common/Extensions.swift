@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MapKit
 
 public extension UIDevice {
     
@@ -21,14 +22,14 @@ public extension UIScreen {
     static var height: CGFloat {
         UIScreen.main.bounds.size.height
     }
-
+    
     static var width: CGFloat {
         UIScreen.main.bounds.size.width
     }
 }
 
 public extension UIWindow {
-
+    
     /// Returns the key window for this application. Uses different APIs to get the key window depending on if the app is running on iOS 13 or 14+
     static var key: UIWindow? {
         if #available(iOS 13, *) {
@@ -47,9 +48,6 @@ extension UIView {
         self.layer.shadowRadius = 1.8
         self.layer.shadowOpacity = 0.3
     }
-}
-
-extension UIView {
     
     func blink() {
         self.alpha = 0.2
@@ -58,5 +56,16 @@ extension UIView {
                        options: [.curveLinear, .repeat, .autoreverse],
                        animations: { self.alpha = 1.0 },
                        completion: nil)
+    }
+}
+
+extension MKMapView {
+    
+    func centerToLocation(location: CLLocation, regionRadius: CLLocationDistance) {
+        let coordinateRegion = MKCoordinateRegion(
+            center: location.coordinate,
+            latitudinalMeters: regionRadius,
+            longitudinalMeters: regionRadius)
+        setRegion(coordinateRegion, animated: true)
     }
 }

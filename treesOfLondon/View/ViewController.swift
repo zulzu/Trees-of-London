@@ -52,8 +52,36 @@ class ViewController: UIViewController, MKMapViewDelegate {
             ClusterView.self,
             forAnnotationViewWithReuseIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier)
         
-        // Set initial location, map boundary and the maximum zoom range
-        mapView.centerToLocation(defaultLocation)
+        loadInitialData { (data, error) in
+            if data != nil {
+                self.loadingLabel.isHidden = true
+                self.mapView.addAnnotations(self.trees)
+            }
+        }
+        
+        locationButton.buttonShadow()
+        infoButton.buttonShadow()
+        setUpMapView()
+        
+        loadingLabel.text = String.getString(.loadingData)
+        loadingLabel.textColor = .linkColour
+        loadingLabel.blink()
+    }
+    
+    private func setUpMapView() {
+        mapView.showsUserLocation = true
+        mapView.showsCompass = true
+        mapView.showsScale = true
+        mapView.centerToLocation(location: defaultLocation, regionRadius: kUI.ZoomRange.maxDistance)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            self.setLocationOnMap()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                self.setBoundary()
+            }
+        }
+    }
+    
+    private func setBoundary() {
         let region = MKCoordinateRegion(
             center: defaultLocation.coordinate,
             latitudinalMeters: kUI.ZoomRange.maxDistance,
@@ -62,31 +90,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
             MKMapView.CameraBoundary(coordinateRegion: region),
             animated: true)
         mapView.setCameraZoomRange(zoomRange, animated: true)
-        
-        locationButton.buttonShadow()
-        infoButton.buttonShadow()
-        
-        setUpMapView()
-        
-        loadingLabel.text = String.getString(.loadingData)
-        loadingLabel.textColor = .linkColour
-        loadingLabel.blink()
-        
-        loadInitialData { (data, error) in
-            if data != nil {
-//                let dateNow = Date()
-//                print("Dataloading finished: \(dateNow)")
-                self.loadingLabel.isHidden = true
-                self.mapView.addAnnotations(self.trees)
-            }
-        }
-    }
-    
-    private func setUpMapView() {
-        mapView.showsUserLocation = true
-        mapView.showsCompass = true
-        mapView.showsScale = true
-        setLocationOnMap()
     }
     
     /// For checking the current location of the user
@@ -111,7 +114,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
             if isUserInLondon {
                 currentLocation()
             } else {
-                mapView.centerToLocation(defaultLocation)
+                mapView.centerToLocation(location: defaultLocation, regionRadius: kUI.ZoomRange.small)
             }
         }
     }
@@ -121,7 +124,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     ///   - latitude: the latitude
     ///   - longitude: the longitude
     /// - Returns: a bool
-    func checkIfInLondon(latitude: Double, longitude: Double) -> Bool {
+    private func checkIfInLondon(latitude: Double, longitude: Double) -> Bool {
         if (latitude > 51.35 && latitude < 51.7) && (longitude > -0.55 && longitude < 0.2) {
             return true
         } else {
@@ -131,9 +134,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     private func loadInitialData(completion: @escaping (_ data: [Trees]?, _ error: Error?) -> ()) {
         
-//        let date = Date()
-//        print("Dataloading started: \(date)")
-                
         var receivedError: Error?
         
         DispatchQueue.global(qos: .userInteractive).async {
@@ -149,7 +149,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
                     .compactMap { $0 as? MKGeoJSONFeature }
                 let allTrees = features.compactMap(Trees.init)
                 self.trees.append(contentsOf: allTrees)
-
+                
             } catch {
                 receivedError = error
             }
@@ -161,21 +161,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
 }
 
 //MARK: - Extensions
-
-private extension MKMapView {
-    
-    func centerToLocation(
-        _ location: CLLocation,
-        regionRadius: CLLocationDistance = kUI.ZoomRange.small
-    ) {
-        let coordinateRegion = MKCoordinateRegion(
-            center: location.coordinate,
-            latitudinalMeters: regionRadius,
-            longitudinalMeters: regionRadius)
-        setRegion(coordinateRegion, animated: true)
-    }
-}
-
 extension ViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
