@@ -53,6 +53,7 @@
 		C9B6B90525E01DA600D125FF /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B6B90425E01DA600D125FF /* Enums.swift */; };
 		C9B6B90A25E42E2300D125FF /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B6B90925E42E2300D125FF /* Colours.swift */; };
 		C9F56FAF25F0FB34009F29CC /* maploading_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C9F56FAE25F0FB34009F29CC /* maploading_icon.png */; };
+		C9F56FB225F10382009F29CC /* LoadingLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F56FB125F10382009F29CC /* LoadingLabelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +105,7 @@
 		C9B6B90425E01DA600D125FF /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		C9B6B90925E42E2300D125FF /* Colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
 		C9F56FAE25F0FB34009F29CC /* maploading_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = maploading_icon.png; path = ../../../../../Downloads/maploading_icon.png; sourceTree = "<group>"; };
+		C9F56FB125F10382009F29CC /* LoadingLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingLabelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				C97F95A5245B31C900932DDE /* TreeMarkerView.swift */,
+				C9F56FB125F10382009F29CC /* LoadingLabelView.swift */,
 				C98FFF082463285800C9B6F7 /* ClusterView.swift */,
 				C98524A32445B8450047BF66 /* LaunchScreen.storyboard */,
 				C985249C2445B8440047BF66 /* ViewController.swift */,
@@ -348,6 +351,7 @@
 				C98AA28624913618003AAFF2 /* InfoPanelController.swift in Sources */,
 				C985249B2445B8440047BF66 /* SceneDelegate.swift in Sources */,
 				C9B6B8F925DEE74200D125FF /* Constants.swift in Sources */,
+				C9F56FB225F10382009F29CC /* LoadingLabelView.swift in Sources */,
 				C9B6B90525E01DA600D125FF /* Enums.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

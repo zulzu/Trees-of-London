@@ -25,7 +25,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         setLocationOnMap()
     }
     
-    @IBOutlet weak var loadingLabel: UILabel!
+    @IBOutlet weak var loadingView: LoadingLabelView!
     
     @IBOutlet private weak var locationButton: UIButton!
     @IBOutlet private weak var infoButton: UIButton!
@@ -44,7 +44,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+
         mapView.register(
             TreeMarkerView.self,
             forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
@@ -54,18 +54,16 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         loadInitialData { (data, error) in
             if data != nil {
-                self.loadingLabel.isHidden = true
                 self.mapView.addAnnotations(self.trees)
+                self.loadingView.fadeOut()
             }
         }
         
+        loadingView.fadeIn()
+        loadingView.buttonShadow()
         locationButton.buttonShadow()
         infoButton.buttonShadow()
         setUpMapView()
-        
-        loadingLabel.text = String.getString(.loadingData)
-        loadingLabel.textColor = .linkColour
-        loadingLabel.blink()
     }
     
     private func setUpMapView() {

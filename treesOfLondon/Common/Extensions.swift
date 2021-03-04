@@ -51,9 +51,27 @@ extension UIView {
     
     func blink() {
         self.alpha = 0.2
-        UIView.animate(withDuration: 1,
+        UIView.animate(withDuration: 1.2,
                        delay: 0.0,
-                       options: [.curveLinear, .repeat, .autoreverse],
+                       options: [.curveEaseInOut, .repeat, .autoreverse],
+                       animations: { self.alpha = 1.0 },
+                       completion: nil)
+    }
+    
+    func fadeOut() {
+        self.alpha = 1.0
+        UIView.animate(withDuration: 1.0,
+                       delay: 1.0,
+                       options: [.curveEaseInOut],
+                       animations: { self.alpha = 0.0 },
+                       completion: nil)
+    }
+    
+    func fadeIn() {
+        self.alpha = 0.0
+        UIView.animate(withDuration: 0.8,
+                       delay: 0.5,
+                       options: [.curveEaseInOut],
                        animations: { self.alpha = 1.0 },
                        completion: nil)
     }

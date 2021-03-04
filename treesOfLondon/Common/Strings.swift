@@ -33,8 +33,10 @@ enum StringKey: String, CaseIterable {
     case locAccessWarning
     /// The word "OK"
     case ok
-    /// The text on the loading data label
-    case loadingData
+    /// The title text on the loading data view
+    case loadingDataTitle
+    /// The body text on the loading data view
+    case loadingDataMessage
 }
 
 extension String {
@@ -67,7 +69,8 @@ fileprivate struct StringProvider {
             .locAccess: "Allow Location Access",
             .locAccessWarning: "Trees of London needs to access your location to show trees in your area.  When location is not available or you aren’t in central London, we’ll use a central London location instead.",
             .ok: "OK",
-            .loadingData: "Loading all the trees\nThere are many, so this can take a few seconds…",
+            .loadingDataTitle: "Loading all the trees",
+            .loadingDataMessage: "There are many, so this can take a few seconds…",
             
         ]
     }

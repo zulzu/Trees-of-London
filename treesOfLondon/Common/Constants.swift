@@ -56,6 +56,8 @@ enum kUI {
         static let screenLeading: CGFloat = 25
         static let screenTrailing: CGFloat = 25
         static let screenHorizontal: CGFloat = 25
+        static let labelEdge: CGFloat = 16
+        static let loadingViewExtraPadding: CGFloat = (UIScreen.main.bounds.width > 370) ? 16 : 0
     }
     
     enum Spacing {
@@ -64,12 +66,16 @@ enum kUI {
         static let titleToSubtitleTiny: CGFloat = 10
         static let buttonToButton: CGFloat = 10
         static let cellToCell: CGFloat = 8
+        static let small: CGFloat = 5
+        static let medium: CGFloat = 10
+        static let large: CGFloat = 20
     }
     
     enum Size {
         static let regularFont: CGFloat = 16
         static let smallFont: CGFloat = 12
         static let cornerRadius: CGFloat = 10
+        static let loadingViewHeight: CGFloat = 100
     }
     
     enum ZoomRange {
