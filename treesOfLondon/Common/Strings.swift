@@ -65,9 +65,9 @@ fileprivate struct StringProvider {
             .datastoreLink: "https://data.london.gov.uk/dataset/local-authority-maintained-trees",
             .settings: "Settings",
             .locAccess: "Allow Location Access",
-            .locAccessWarning: "Trees of London needs access to your location. Turn on Location Services in your device settings. When location is not available or you are not in London, the application will use a default location.",
+            .locAccessWarning: "Trees of London needs to access your location to show trees in your area.  When location is not available or you aren’t in central London, we’ll use a central London location instead.",
             .ok: "OK",
-            .loadingData: "Loading data\nThis can take a few seconds...",
+            .loadingData: "Loading all the trees\nThere are many, so this can take a few seconds…",
             
         ]
     }

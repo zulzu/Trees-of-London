@@ -52,6 +52,7 @@
 		C9B6B90025DEE75900D125FF /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B6B8FF25DEE75900D125FF /* Strings.swift */; };
 		C9B6B90525E01DA600D125FF /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B6B90425E01DA600D125FF /* Enums.swift */; };
 		C9B6B90A25E42E2300D125FF /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B6B90925E42E2300D125FF /* Colours.swift */; };
+		C9F56FAF25F0FB34009F29CC /* maploading_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C9F56FAE25F0FB34009F29CC /* maploading_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,7 @@
 		C9B6B8FF25DEE75900D125FF /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		C9B6B90425E01DA600D125FF /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		C9B6B90925E42E2300D125FF /* Colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
+		C9F56FAE25F0FB34009F29CC /* maploading_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = maploading_icon.png; path = ../../../../../Downloads/maploading_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			children = (
 				C999783E24A649CF00131C15 /* treeImages */,
 				C98524A12445B8450047BF66 /* Assets.xcassets */,
+				C9F56FAE25F0FB34009F29CC /* maploading_icon.png */,
 				C999783824A6466600131C15 /* close_icon2x.png */,
 				C999783624A6466600131C15 /* info_icon2x.png */,
 				C999783724A6466600131C15 /* location_icon2x.png */,
@@ -290,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9F56FAF25F0FB34009F29CC /* maploading_icon.png in Resources */,
 				C999785D24A649FC00131C15 /* Hornbeam.jpg in Resources */,
 				C999786324A649FC00131C15 /* Whitebeam.jpg in Resources */,
 				C999786224A649FC00131C15 /* Lime.jpg in Resources */,

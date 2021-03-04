@@ -21,9 +21,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Trees of London needs access to your location. When location is not available or you are not in London, the application will use a default location.</string>
+	<string>Trees of London needs to access your location to show trees in your area.  When location is not available or you aren’t in central London, we’ll use a central London location instead.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Trees of London needs access to your location. When location is not available or you are not in London, the application will use a default location.</string>
+	<string>Trees of London needs to access your location to show trees in your area.  When location is not available or you aren’t in central London, we’ll use a central London location instead.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

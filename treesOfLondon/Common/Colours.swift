@@ -37,5 +37,8 @@ public extension UIColor {
     static let linkColour: UIColor = UIColor(named: "linkColour") ?? UIColor(red: 2/255, green: 116/255, blue: 79/255, alpha: 1.0)
     static let textMainColour: UIColor = UIColor(named: "textMainColour") ?? UIColor(red: 0/255, green: 12/255, blue: 0/255, alpha: 1.0)
     static let background01: UIColor = UIColor(named: "background01") ?? UIColor(red: 235/255, green: 235/255, blue: 235/255, alpha: 1.0)
+    static let messageBoxBg: UIColor = UIColor(named: "messageBoxBg") ?? UIColor(red: 212/255, green: 247/255, blue: 231/255, alpha: 1.0)
+    static let messageBoxText: UIColor = UIColor(named: "messageBoxText") ?? UIColor(red: 57/255, green: 57/255, blue: 56/255, alpha: 1.0)
+
 }
 
