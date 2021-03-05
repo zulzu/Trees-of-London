@@ -499,7 +499,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 7U8H9SK8NB;
 				INFOPLIST_FILE = treesOfLondon/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -507,7 +507,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.82;
+				MARKETING_VERSION = 0.91;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrasPal.treesOfLondon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -520,7 +520,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 7U8H9SK8NB;
 				INFOPLIST_FILE = treesOfLondon/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -528,7 +528,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.82;
+				MARKETING_VERSION = 0.91;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrasPal.treesOfLondon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

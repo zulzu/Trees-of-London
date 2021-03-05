@@ -13,20 +13,17 @@ import CoreLocation
 class ViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet private var mapView: MKMapView!
-    
     @IBAction private func infoButtonPressed(_ sender: UIButton) {
         let infoPanel = InfoPanelController()
         infoPanel.modalPresentationStyle = .fullScreen
         present(infoPanel, animated: true, completion: nil)
     }
-    
     @IBAction private func locationButtonPressed(_ sender: UIButton) {
-        updateLocationService()
+        updateLocationService(didShowLocationWarning)
         setLocationOnMap()
+        didShowLocationWarning = true
     }
-    
-    @IBOutlet weak var loadingView: LoadingLabelView!
-    
+    @IBOutlet private weak var loadingView: LoadingLabelView!
     @IBOutlet private weak var locationButton: UIButton!
     @IBOutlet private weak var infoButton: UIButton!
     
@@ -34,12 +31,12 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     private let defaultLocation = CLLocation(latitude: kLocations.defaultLocation.latitude, longitude: kLocations.defaultLocation.longitude)
     private let zoomRange = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: kUI.ZoomRange.large)
-    
     fileprivate let locationManager: CLLocationManager = {
         let manager = CLLocationManager()
         manager.requestWhenInUseAuthorization()
         return manager
     }()
+    private var didShowLocationWarning: Bool = false
     
     override func viewDidLoad() {
         
@@ -105,15 +102,16 @@ class ViewController: UIViewController, MKMapViewDelegate {
     /// For updating the location on the map.
     /// If the user in London then the app can use that location, otherwise it's gonna use a default location
     private func setLocationOnMap() {
-        if checkLocationService() == LocationServiceStatus.authInUseAlways {
+        
+        let isUserInLondon: Bool = checkIfInLondon(latitude: Double((locationManager.location?.coordinate.latitude ?? 0.1)),
+                                                   longitude: Double((locationManager.location?.coordinate.longitude ?? 0.1)))
+        
+        if checkLocationService() == LocationServiceStatus.authInUseAlways && isUserInLondon {
             print("Location: \(String(describing: locationManager.location?.coordinate))")
-            let isUserInLondon: Bool = checkIfInLondon(latitude: Double((locationManager.location?.coordinate.latitude ?? 0.1)), longitude: Double((locationManager.location?.coordinate.longitude ?? 0.1)))
             print(("User is in London: \(isUserInLondon)"))
-            if isUserInLondon {
-                currentLocation()
-            } else {
-                mapView.centerToLocation(location: defaultLocation, regionRadius: kUI.ZoomRange.small)
-            }
+            currentLocation()
+        } else {
+            mapView.centerToLocation(location: defaultLocation, regionRadius: kUI.ZoomRange.small)
         }
     }
     
@@ -197,7 +195,7 @@ extension ViewController: CLLocationManagerDelegate {
     
     /// For handling the different cases of the CLLocationManager's authorization statuses.
     /// Can request access to the location services or continue running if already has access.
-    func updateLocationService() {
+    func updateLocationService(_ didShowLocationWarning: Bool? = false) {
         /// Check if user has authorized the app to use Location Services
         if CLLocationManager.locationServicesEnabled() {
             
@@ -224,7 +222,7 @@ extension ViewController: CLLocationManagerDelegate {
                     }
                 }))
                 alert.addAction(UIAlertAction(title: String.getString(.ok), style: UIAlertAction.Style.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
+                (didShowLocationWarning ?? false) ? nil : self.present(alert, animated: true, completion: nil)
                 break
                 
             case .authInUseAlways:
