@@ -62,7 +62,7 @@ fileprivate struct StringProvider {
             .home: "Home",
             .errorMsg: "Error, could't retrieve data",
             .about: "About Trees of London",
-            .infoText: "This map visually presents trees in London using a public database available on the London Datastore website.\n \nIt shows the locations and species for over 300,000 street trees. Overall it has 22 species plus a collective group - ‘Other’ - for less common trees. Latin names and photos of leaves also included to help visual identification.\n \nIt’s estimated that there are over eight million trees in London, so this map is only a partial illustration.\n \nThe data was collected in 2014-15 by 25 London boroughs, the City of London and Transport for London. (Data wasn’t provided by 7 other boroughs.)\n \nResource:",
+            .infoText: "This map visually presents trees in the Inner London boroughs (15 boroughs out of the 32) from Ealing to Greenwich.\n \nIt shows the location and basic info for over 300,000 street trees, including 22 species, latin names and leaf photos. It’s estimated that there are over eight million trees in London, so this map is only a partial illustration.\n \nThe data was collected in 2014-15 by 25 London boroughs, the City of London and Transport for London. (Data wasn’t provided by 7 other boroughs and Outer London boroughs are not yet included in this app.)\n \nResource:",
             .londonDatastore: "London Datastore",
             .datastoreLink: "https://data.london.gov.uk/dataset/local-authority-maintained-trees",
             .settings: "Settings",

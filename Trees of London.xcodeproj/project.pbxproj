@@ -45,7 +45,7 @@
 		C999786A24A649FC00131C15 /* Ash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999785224A649FC00131C15 /* Ash.jpg */; };
 		C999786B24A649FC00131C15 /* Alder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999785324A649FC00131C15 /* Alder.jpg */; };
 		C999786C24A649FC00131C15 /* Black Locust.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999785424A649FC00131C15 /* Black Locust.jpg */; };
-		C999786D24A649FC00131C15 /* Hazelnut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999785524A649FC00131C15 /* Hazelnut.jpg */; };
+		C999786D24A649FC00131C15 /* Hazel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999785524A649FC00131C15 /* Hazel.jpg */; };
 		C999786E24A649FC00131C15 /* Pear.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999785624A649FC00131C15 /* Pear.jpg */; };
 		C9B6B8F925DEE74200D125FF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B6B8F825DEE74200D125FF /* Constants.swift */; };
 		C9B6B8FD25DEE74F00D125FF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B6B8FC25DEE74F00D125FF /* Extensions.swift */; };
@@ -98,7 +98,7 @@
 		C999785224A649FC00131C15 /* Ash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ash.jpg; sourceTree = "<group>"; };
 		C999785324A649FC00131C15 /* Alder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Alder.jpg; sourceTree = "<group>"; };
 		C999785424A649FC00131C15 /* Black Locust.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Black Locust.jpg"; sourceTree = "<group>"; };
-		C999785524A649FC00131C15 /* Hazelnut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hazelnut.jpg; sourceTree = "<group>"; };
+		C999785524A649FC00131C15 /* Hazel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hazel.jpg; sourceTree = "<group>"; };
 		C999785624A649FC00131C15 /* Pear.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Pear.jpg; sourceTree = "<group>"; };
 		C9B6B8F825DEE74200D125FF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C9B6B8FC25DEE74F00D125FF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -212,7 +212,7 @@
 				C999785124A649FC00131C15 /* Cypress.jpg */,
 				C999784D24A649FB00131C15 /* Elm.jpg */,
 				C999784F24A649FB00131C15 /* Hawthorn.jpg */,
-				C999785524A649FC00131C15 /* Hazelnut.jpg */,
+				C999785524A649FC00131C15 /* Hazel.jpg */,
 				C999784524A649FB00131C15 /* Hornbeam.jpg */,
 				C999784A24A649FB00131C15 /* Lime.jpg */,
 				C999784224A649FB00131C15 /* Maple.jpg */,
@@ -315,7 +315,7 @@
 				C999786A24A649FC00131C15 /* Ash.jpg in Resources */,
 				C999785B24A649FC00131C15 /* Willow.jpg in Resources */,
 				C999786424A649FC00131C15 /* Chesnut.jpg in Resources */,
-				C999786D24A649FC00131C15 /* Hazelnut.jpg in Resources */,
+				C999786D24A649FC00131C15 /* Hazel.jpg in Resources */,
 				C999783B24A6466700131C15 /* close_icon2x.png in Resources */,
 				C999786624A649FC00131C15 /* Cherry.jpg in Resources */,
 				C98AA28724913618003AAFF2 /* InfoPanelController.xib in Resources */,
@@ -503,7 +503,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 7U8H9SK8NB;
 				INFOPLIST_FILE = treesOfLondon/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -511,7 +511,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.01;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrasPal.treesOfLondon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -524,7 +524,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 7U8H9SK8NB;
 				INFOPLIST_FILE = treesOfLondon/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -532,7 +532,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.01;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrasPal.treesOfLondon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
