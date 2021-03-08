@@ -43,7 +43,7 @@ class LoadingLabelView: UIView {
         
         loadingImage.heightAnchor.constraint(equalToConstant: imageHeight).isActive = true
         loadingImage.widthAnchor.constraint(equalToConstant: loadingImage.frame.width / (loadingImage.frame.height / imageHeight)).isActive = true
-        loadingImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: kUI.Padding.labelEdge + kUI.Padding.loadingViewExtraPadding / 2).isActive = true
+        loadingImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: kUI.Padding.labelEdge + (kUI.Padding.loadingViewExtraPadding / 2)).isActive = true
         
         mainHStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: (kUI.Padding.labelEdge)).isActive = true
         mainHStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -(kUI.Padding.labelEdge)).isActive = true
