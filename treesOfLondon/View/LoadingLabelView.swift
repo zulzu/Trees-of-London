@@ -26,7 +26,7 @@ class LoadingLabelView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
+                
         backgroundColor = .clear
         
         addSubview(labelsVStackView)
@@ -40,17 +40,17 @@ class LoadingLabelView: UIView {
         
         mainHStackView.addArrangedSubview(loadingImage)
         mainHStackView.addArrangedSubview(labelsVStackView)
-        
+
         loadingImage.heightAnchor.constraint(equalToConstant: imageHeight).isActive = true
         loadingImage.widthAnchor.constraint(equalToConstant: loadingImage.frame.width / (loadingImage.frame.height / imageHeight)).isActive = true
-        loadingImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: kUI.Padding.labelEdge + (kUI.Padding.loadingViewExtraPadding / 2)).isActive = true
-        
+        loadingImage.leadingAnchor.constraint(lessThanOrEqualTo: self.leadingAnchor, constant: kUI.Padding.labelEdge + (kUI.Padding.loadingViewExtraPadding / 2)).isActive = true
+
         mainHStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: (kUI.Padding.labelEdge)).isActive = true
         mainHStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -(kUI.Padding.labelEdge)).isActive = true
         mainHStackView.topAnchor.constraint(equalTo: self.topAnchor, constant: kUI.Padding.labelEdge).isActive = true
         
-        labelsVStackView.leadingAnchor.constraint(equalTo: loadingImage.trailingAnchor, constant: kUI.Padding.labelEdge + kUI.Padding.loadingViewExtraPadding).isActive = true
-        labelsVStackView.trailingAnchor.constraint(equalTo: mainHStackView.trailingAnchor, constant: kUI.Padding.labelEdge).isActive = true
+        labelsVStackView.leadingAnchor.constraint(lessThanOrEqualTo: loadingImage.trailingAnchor, constant: kUI.Padding.labelEdge + kUI.Padding.loadingViewExtraPadding).isActive = true
+        labelsVStackView.trailingAnchor.constraint(lessThanOrEqualTo: mainHStackView.trailingAnchor, constant: kUI.Padding.labelEdge).isActive = true
 
         loadingImage.blink()
     }

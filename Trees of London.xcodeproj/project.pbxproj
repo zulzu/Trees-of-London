@@ -52,6 +52,54 @@
 		C9B6B90025DEE75900D125FF /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B6B8FF25DEE75900D125FF /* Strings.swift */; };
 		C9B6B90525E01DA600D125FF /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B6B90425E01DA600D125FF /* Enums.swift */; };
 		C9B6B90A25E42E2300D125FF /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B6B90925E42E2300D125FF /* Colours.swift */; };
+		C9D9BEC325F92A76001C275C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C985249C2445B8440047BF66 /* ViewController.swift */; };
+		C9D9BEC425F92A76001C275C /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B6B8FF25DEE75900D125FF /* Strings.swift */; };
+		C9D9BEC525F92A76001C275C /* Trees.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98524AE2445CC450047BF66 /* Trees.swift */; };
+		C9D9BEC625F92A76001C275C /* TreeMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F95A5245B31C900932DDE /* TreeMarkerView.swift */; };
+		C9D9BEC725F92A76001C275C /* ClusterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98FFF082463285800C9B6F7 /* ClusterView.swift */; };
+		C9D9BEC825F92A76001C275C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B6B8FC25DEE74F00D125FF /* Extensions.swift */; };
+		C9D9BEC925F92A76001C275C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98524982445B8440047BF66 /* AppDelegate.swift */; };
+		C9D9BECA25F92A76001C275C /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B6B90925E42E2300D125FF /* Colours.swift */; };
+		C9D9BECB25F92A76001C275C /* InfoPanelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98AA28424913618003AAFF2 /* InfoPanelController.swift */; };
+		C9D9BECC25F92A76001C275C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C985249A2445B8440047BF66 /* SceneDelegate.swift */; };
+		C9D9BECD25F92A76001C275C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B6B8F825DEE74200D125FF /* Constants.swift */; };
+		C9D9BECE25F92A76001C275C /* LoadingLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F56FB125F10382009F29CC /* LoadingLabelView.swift */; };
+		C9D9BECF25F92A76001C275C /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B6B90425E01DA600D125FF /* Enums.swift */; };
+		C9D9BED225F92A76001C275C /* maploading_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C9F56FAE25F0FB34009F29CC /* maploading_icon.png */; };
+		C9D9BED325F92A76001C275C /* Hornbeam.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784524A649FB00131C15 /* Hornbeam.jpg */; };
+		C9D9BED425F92A76001C275C /* Whitebeam.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784B24A649FB00131C15 /* Whitebeam.jpg */; };
+		C9D9BED525F92A76001C275C /* Lime.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784A24A649FB00131C15 /* Lime.jpg */; };
+		C9D9BED625F92A76001C275C /* Plane.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784124A649FB00131C15 /* Plane.jpg */; };
+		C9D9BED725F92A76001C275C /* location_icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C999783724A6466600131C15 /* location_icon2x.png */; };
+		C9D9BED825F92A76001C275C /* londontrees_load.png in Resources */ = {isa = PBXBuildFile; fileRef = C9F847E525F2BDD8001EAEFA /* londontrees_load.png */; };
+		C9D9BED925F92A76001C275C /* Other.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784724A649FB00131C15 /* Other.jpg */; };
+		C9D9BEDA25F92A76001C275C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98524A32445B8450047BF66 /* LaunchScreen.storyboard */; };
+		C9D9BEDB25F92A76001C275C /* Cypress.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999785124A649FC00131C15 /* Cypress.jpg */; };
+		C9D9BEDC25F92A76001C275C /* londontrees_load_image3x.png.png in Resources */ = {isa = PBXBuildFile; fileRef = C992D9E725E6F0A30081A961 /* londontrees_load_image3x.png.png */; };
+		C9D9BEDD25F92A76001C275C /* Beech.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784924A649FB00131C15 /* Beech.jpg */; };
+		C9D9BEDE25F92A76001C275C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C98524A12445B8450047BF66 /* Assets.xcassets */; };
+		C9D9BEDF25F92A76001C275C /* Ash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999785224A649FC00131C15 /* Ash.jpg */; };
+		C9D9BEE025F92A76001C275C /* Willow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784324A649FB00131C15 /* Willow.jpg */; };
+		C9D9BEE125F92A76001C275C /* Chesnut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784C24A649FB00131C15 /* Chesnut.jpg */; };
+		C9D9BEE225F92A76001C275C /* Hazel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999785524A649FC00131C15 /* Hazel.jpg */; };
+		C9D9BEE325F92A76001C275C /* close_icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C999783824A6466600131C15 /* close_icon2x.png */; };
+		C9D9BEE425F92A76001C275C /* Cherry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784E24A649FB00131C15 /* Cherry.jpg */; };
+		C9D9BEE525F92A76001C275C /* InfoPanelController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C98AA28524913618003AAFF2 /* InfoPanelController.xib */; };
+		C9D9BEE625F92A76001C275C /* Elm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784D24A649FB00131C15 /* Elm.jpg */; };
+		C9D9BEE725F92A76001C275C /* Alder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999785324A649FC00131C15 /* Alder.jpg */; };
+		C9D9BEE825F92A76001C275C /* Pear.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999785624A649FC00131C15 /* Pear.jpg */; };
+		C9D9BEE925F92A76001C275C /* Oak.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999785024A649FB00131C15 /* Oak.jpg */; };
+		C9D9BEEA25F92A76001C275C /* info_icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C999783624A6466600131C15 /* info_icon2x.png */; };
+		C9D9BEEB25F92A76001C275C /* Black Locust.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999785424A649FC00131C15 /* Black Locust.jpg */; };
+		C9D9BEEC25F92A76001C275C /* Apple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784424A649FB00131C15 /* Apple.jpg */; };
+		C9D9BEED25F92A76001C275C /* Birch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999783F24A649FB00131C15 /* Birch.jpg */; };
+		C9D9BEEE25F92A76001C275C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C985249E2445B8440047BF66 /* Main.storyboard */; };
+		C9D9BEEF25F92A76001C275C /* Unknown.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784624A649FB00131C15 /* Unknown.jpg */; };
+		C9D9BEF025F92A76001C275C /* Pine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784024A649FB00131C15 /* Pine.jpg */; };
+		C9D9BEF125F92A76001C275C /* Maple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784224A649FB00131C15 /* Maple.jpg */; };
+		C9D9BEF225F92A76001C275C /* londonTrees_Final.geojson in Resources */ = {isa = PBXBuildFile; fileRef = C992D9F325E7096D0081A961 /* londonTrees_Final.geojson */; };
+		C9D9BEF325F92A76001C275C /* Hawthorn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784F24A649FB00131C15 /* Hawthorn.jpg */; };
+		C9D9BEF425F92A76001C275C /* Poplar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C999784824A649FB00131C15 /* Poplar.jpg */; };
 		C9F56FAF25F0FB34009F29CC /* maploading_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C9F56FAE25F0FB34009F29CC /* maploading_icon.png */; };
 		C9F56FB225F10382009F29CC /* LoadingLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F56FB125F10382009F29CC /* LoadingLabelView.swift */; };
 		C9F847E625F2BDD8001EAEFA /* londontrees_load.png in Resources */ = {isa = PBXBuildFile; fileRef = C9F847E525F2BDD8001EAEFA /* londontrees_load.png */; };
@@ -66,7 +114,7 @@
 		C985249F2445B8440047BF66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C98524A12445B8450047BF66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C98524A42445B8450047BF66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C98524A62445B8450047BF66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C98524A62445B8450047BF66 /* ToLProd-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ToLProd-Info.plist"; sourceTree = "<group>"; };
 		C98524AE2445CC450047BF66 /* Trees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trees.swift; sourceTree = "<group>"; };
 		C98AA28424913618003AAFF2 /* InfoPanelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPanelController.swift; sourceTree = "<group>"; };
 		C98AA28524913618003AAFF2 /* InfoPanelController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoPanelController.xib; sourceTree = "<group>"; };
@@ -105,6 +153,8 @@
 		C9B6B8FF25DEE75900D125FF /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		C9B6B90425E01DA600D125FF /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		C9B6B90925E42E2300D125FF /* Colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
+		C9D9BEF825F92A76001C275C /* ToL - Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToL - Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9D9BF0025F944C8001C275C /* ToLDev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ToLDev-Info.plist"; sourceTree = "<group>"; };
 		C9F56FAE25F0FB34009F29CC /* maploading_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = maploading_icon.png; path = ../../../../../Downloads/maploading_icon.png; sourceTree = "<group>"; };
 		C9F56FB125F10382009F29CC /* LoadingLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingLabelView.swift; sourceTree = "<group>"; };
 		C9F847E525F2BDD8001EAEFA /* londontrees_load.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = londontrees_load.png; path = ../../../../../Downloads/londontrees_load.png; sourceTree = "<group>"; };
@@ -112,6 +162,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		C98524922445B8440047BF66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9D9BED025F92A76001C275C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -153,9 +210,7 @@
 				C9F56FB125F10382009F29CC /* LoadingLabelView.swift */,
 				C98FFF082463285800C9B6F7 /* ClusterView.swift */,
 				C98524A32445B8450047BF66 /* LaunchScreen.storyboard */,
-				C985249C2445B8440047BF66 /* ViewController.swift */,
 				C985249E2445B8440047BF66 /* Main.storyboard */,
-				C98AA28424913618003AAFF2 /* InfoPanelController.swift */,
 				C98AA28524913618003AAFF2 /* InfoPanelController.xib */,
 			);
 			path = View;
@@ -181,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				C98524952445B8440047BF66 /* Trees of London.app */,
+				C9D9BEF825F92A76001C275C /* ToL - Dev.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,8 +248,10 @@
 				C97F95A8245B31F700932DDE /* Resources */,
 				C9B6B8F725DEE72B00D125FF /* Common */,
 				C97F95AA245B325800932DDE /* Model */,
+				C9D9BF0725F94962001C275C /* Controllers */,
 				C97F95A9245B323600932DDE /* View */,
-				C98524A62445B8450047BF66 /* Info.plist */,
+				C98524A62445B8450047BF66 /* ToLProd-Info.plist */,
+				C9D9BF0025F944C8001C275C /* ToLDev-Info.plist */,
 			);
 			path = treesOfLondon;
 			sourceTree = "<group>";
@@ -241,6 +299,15 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		C9D9BF0725F94962001C275C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C98AA28424913618003AAFF2 /* InfoPanelController.swift */,
+				C985249C2445B8440047BF66 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -259,6 +326,23 @@
 			name = "Trees of London";
 			productName = treesOfLondon;
 			productReference = C98524952445B8440047BF66 /* Trees of London.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9D9BEC125F92A76001C275C /* ToL - Dev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9D9BEF525F92A76001C275C /* Build configuration list for PBXNativeTarget "ToL - Dev" */;
+			buildPhases = (
+				C9D9BEC225F92A76001C275C /* Sources */,
+				C9D9BED025F92A76001C275C /* Frameworks */,
+				C9D9BED125F92A76001C275C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ToL - Dev";
+			productName = treesOfLondon;
+			productReference = C9D9BEF825F92A76001C275C /* ToL - Dev.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -290,6 +374,7 @@
 			projectRoot = "";
 			targets = (
 				C98524942445B8440047BF66 /* Trees of London */,
+				C9D9BEC125F92A76001C275C /* ToL - Dev */,
 			);
 		};
 /* End PBXProject section */
@@ -337,6 +422,48 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C9D9BED125F92A76001C275C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9D9BED225F92A76001C275C /* maploading_icon.png in Resources */,
+				C9D9BED325F92A76001C275C /* Hornbeam.jpg in Resources */,
+				C9D9BED425F92A76001C275C /* Whitebeam.jpg in Resources */,
+				C9D9BED525F92A76001C275C /* Lime.jpg in Resources */,
+				C9D9BED625F92A76001C275C /* Plane.jpg in Resources */,
+				C9D9BED725F92A76001C275C /* location_icon2x.png in Resources */,
+				C9D9BED825F92A76001C275C /* londontrees_load.png in Resources */,
+				C9D9BED925F92A76001C275C /* Other.jpg in Resources */,
+				C9D9BEDA25F92A76001C275C /* LaunchScreen.storyboard in Resources */,
+				C9D9BEDB25F92A76001C275C /* Cypress.jpg in Resources */,
+				C9D9BEDC25F92A76001C275C /* londontrees_load_image3x.png.png in Resources */,
+				C9D9BEDD25F92A76001C275C /* Beech.jpg in Resources */,
+				C9D9BEDE25F92A76001C275C /* Assets.xcassets in Resources */,
+				C9D9BEDF25F92A76001C275C /* Ash.jpg in Resources */,
+				C9D9BEE025F92A76001C275C /* Willow.jpg in Resources */,
+				C9D9BEE125F92A76001C275C /* Chesnut.jpg in Resources */,
+				C9D9BEE225F92A76001C275C /* Hazel.jpg in Resources */,
+				C9D9BEE325F92A76001C275C /* close_icon2x.png in Resources */,
+				C9D9BEE425F92A76001C275C /* Cherry.jpg in Resources */,
+				C9D9BEE525F92A76001C275C /* InfoPanelController.xib in Resources */,
+				C9D9BEE625F92A76001C275C /* Elm.jpg in Resources */,
+				C9D9BEE725F92A76001C275C /* Alder.jpg in Resources */,
+				C9D9BEE825F92A76001C275C /* Pear.jpg in Resources */,
+				C9D9BEE925F92A76001C275C /* Oak.jpg in Resources */,
+				C9D9BEEA25F92A76001C275C /* info_icon2x.png in Resources */,
+				C9D9BEEB25F92A76001C275C /* Black Locust.jpg in Resources */,
+				C9D9BEEC25F92A76001C275C /* Apple.jpg in Resources */,
+				C9D9BEED25F92A76001C275C /* Birch.jpg in Resources */,
+				C9D9BEEE25F92A76001C275C /* Main.storyboard in Resources */,
+				C9D9BEEF25F92A76001C275C /* Unknown.jpg in Resources */,
+				C9D9BEF025F92A76001C275C /* Pine.jpg in Resources */,
+				C9D9BEF125F92A76001C275C /* Maple.jpg in Resources */,
+				C9D9BEF225F92A76001C275C /* londonTrees_Final.geojson in Resources */,
+				C9D9BEF325F92A76001C275C /* Hawthorn.jpg in Resources */,
+				C9D9BEF425F92A76001C275C /* Poplar.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -357,6 +484,26 @@
 				C9B6B8F925DEE74200D125FF /* Constants.swift in Sources */,
 				C9F56FB225F10382009F29CC /* LoadingLabelView.swift in Sources */,
 				C9B6B90525E01DA600D125FF /* Enums.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9D9BEC225F92A76001C275C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9D9BEC325F92A76001C275C /* ViewController.swift in Sources */,
+				C9D9BEC425F92A76001C275C /* Strings.swift in Sources */,
+				C9D9BEC525F92A76001C275C /* Trees.swift in Sources */,
+				C9D9BEC625F92A76001C275C /* TreeMarkerView.swift in Sources */,
+				C9D9BEC725F92A76001C275C /* ClusterView.swift in Sources */,
+				C9D9BEC825F92A76001C275C /* Extensions.swift in Sources */,
+				C9D9BEC925F92A76001C275C /* AppDelegate.swift in Sources */,
+				C9D9BECA25F92A76001C275C /* Colours.swift in Sources */,
+				C9D9BECB25F92A76001C275C /* InfoPanelController.swift in Sources */,
+				C9D9BECC25F92A76001C275C /* SceneDelegate.swift in Sources */,
+				C9D9BECD25F92A76001C275C /* Constants.swift in Sources */,
+				C9D9BECE25F92A76001C275C /* LoadingLabelView.swift in Sources */,
+				C9D9BECF25F92A76001C275C /* Enums.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,15 +650,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 7U8H9SK8NB;
-				INFOPLIST_FILE = treesOfLondon/Info.plist;
+				INFOPLIST_FILE = "treesOfLondon/ToL-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.01;
+				MARKETING_VERSION = 1.02;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrasPal.treesOfLondon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -524,16 +671,58 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 7U8H9SK8NB;
-				INFOPLIST_FILE = treesOfLondon/Info.plist;
+				INFOPLIST_FILE = "treesOfLondon/ToL-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.01;
+				MARKETING_VERSION = 1.02;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrasPal.treesOfLondon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		C9D9BEF625F92A76001C275C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
+				DEVELOPMENT_TEAM = 7U8H9SK8NB;
+				INFOPLIST_FILE = "treesOfLondon/ToLDev-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.02;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andrasPal.treesOfLondon-Dev";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C9D9BEF725F92A76001C275C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
+				DEVELOPMENT_TEAM = 7U8H9SK8NB;
+				INFOPLIST_FILE = "treesOfLondon/ToLDev-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.02;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andrasPal.treesOfLondon-Dev";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -557,6 +746,15 @@
 			buildConfigurations = (
 				C98524AA2445B8450047BF66 /* Debug */,
 				C98524AB2445B8450047BF66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9D9BEF525F92A76001C275C /* Build configuration list for PBXNativeTarget "ToL - Dev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9D9BEF625F92A76001C275C /* Debug */,
+				C9D9BEF725F92A76001C275C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
